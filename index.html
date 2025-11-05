@@ -96,7 +96,7 @@
                   On desktop, it becomes a vertical list.
                   The 'nav-links' class is used by JavaScript to find them.
                 -->
-                <ul classs="flex justify-center space-x-4 mt-4 md:flex-col md:space-x-0 md:space-y-3 nav-links">
+                <ul class="flex justify-center space-x-4 mt-4 md:flex-col md:space-x-0 md:space-y-3 nav-links">
                     <li><a href="#welcome" class="nav-link block p-2 md:p-0 transition-all duration-200 hover:text-white">Welcome</a></li>
                     <li><a href="#projects" class="nav-link block p-2 md:p-0 transition-all duration-200 hover:text-white">Projects</a></li>
                     <li><a href="#resume" class="nav-link block p-2 md:p-0 transition-all duration-200 hover:text-white">Resume</a></li>
@@ -390,10 +390,13 @@
             // --- Active Link on Scroll (Intersection Observer) ---
             const observerOptions = {
                 root: null, // relative to the viewport
-                rootMargin: '0px',
-                // This threshold means the link becomes active when 50%
-                // of the section is visible. Adjust as needed.
-                threshold: 0.5 
+                // We create a "trigger window" in the middle of the screen.
+                // top margin: -40% (ignore top 40% of viewport)
+                // bottom margin: -40% (ignore bottom 40% of viewport)
+                // This leaves the middle 20% of the screen as the "active" zone.
+                rootMargin: '-40% 0px -40% 0px',
+                // Fire as soon as any part of the section enters this zone
+                threshold: 0
             };
 
             const observerCallback = (entries, observer) => {
