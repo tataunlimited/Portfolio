@@ -1,127 +1,402 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taher Samadi Shal - Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      color: white;
-      background-color: #1a1a1a;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-g">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taher Samadi Shal - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f4f5; /* A light gray background for the content */
+        }
+        
+        /* Style for the active navigation link */
+        .nav-link.active {
+            color: #818cf8; /* An indigo color for the active link */
+            font-weight: 600;
+        }
 
-    header {
-      background-color: #333;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.5em;
-      margin: 0;
-    }
-
-    h2 {
-      font-size: 1.5em;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
-
-    h3 {
-      font-size: 1.2em;
-      margin-bottom: 5px;
-    }
-
-    section {
-      padding: 40px;
-    }
-
-    article {
-      margin-bottom: 30px;
-      padding: 20px;
-      border: 1px solid #555;
-      border-radius: 5px;
-      background-color: #222;
-    }
-
-    .video-placeholder {
-      width: 100%;
-      height: 335px;
-      background-color: #444;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2em;
-      border-radius: 5px;
-    }
-    .video-placeholder-Short {
-      width: 100%;
-      height: 610px;
-      background-color: #444;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2em;
-      border-radius: 5px;
-    }
-  </style>
+        /* Offset for the fixed header on anchor link navigation */
+        section[id] {
+            scroll-margin-top: 100px; /* Adjust this value to match your header height */
+        }
+        
+        @media (min-width: 768px) {
+             /* Offset for the fixed sidebar on desktop */
+            section[id] {
+                scroll-margin-top: 24px;
+            }
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <h1>Taher Samadi Shal</h1>
-    <h2>Unity Developer</h2>
-    <p>Winter Park, Florida</p>
-    <p>(+1) 3213157980</p>
-    <p>taher.samadi@gmail.com</p>
-  </header>
+<body class="text-gray-800">
 
-  <section>
-    <h2>Experience</h2>
+    <!-- 
+      Main container for the two-column layout.
+      On mobile (default): Full width, preparation for top-bar nav.
+      On medium screens and up (md:): A flex container for side-bar + main content.
+    -->
+    <div class="md:flex">
 
-    <article>
-      <h3>DoubleCoconut, Armenia, Yerevan - Lead Unity Engineer</h3>
-      <p>April 2021 – present</p>
-      <p>Developed complex multiplayer card game, Emergents TCG, maintaining code quality and core gameplay architecture. Implemented multiplayer features using Photon Engine, optimizing game for mobile, WebGL, and standalone platforms. Conducted code reviews, created weekly client reports, and ensured ongoing client satisfaction.</p>
-      <p>Role: Lead Unity Engineer</p>
-      <div class="video-placeholder-short">
-        <iframe width="334" height="594" src="https://www.youtube.com/embed/nLvwsFsmEZk" title="Emergents TCG Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>      </div>
-    </article>
+        <!-- 
+          NAVIGATION SIDEBAR
+          Mobile: Fixed top bar.
+          Desktop (md:): Fixed left sidebar.
+        -->
+        <nav class="bg-gray-900 text-gray-300
+                    fixed top-0 left-0 w-full z-50 p-5 shadow-lg
+                    md:w-64 md:min-h-screen md:p-8 md:shadow-none">
+            
+            <div class="md:sticky md:top-8">
+                <!-- Header: Your Name & Title -->
+                <div class="mb-8 hidden md:block">
+                    <h1 class="text-3xl font-bold text-white">Your Name</h1>
+                    <h2 class="text-lg text-indigo-300">Your Title (e.g., Software Engineer)</h2>
+                </div>
+                
+                <!-- A title for mobile view, hidden on desktop -->
+                <h1 class="text-xl font-bold text-white md:hidden text-center">Your Name - Portfolio</h1>
 
-    <article>
-      <h3>Badbadake Haft Aseman, Iran, Tehran - Senior Unity Engineer</h3>
-      <p>October 2018 – March 2021</p>
-      <p>Worked on Naxia, a 3D hack-and-slash RPG, developing various game features and tools to improve workflow. Gained experience with custom shaders for high-quality visual effects. Published Naxia on Steam as early access, achieving positive reviews and engagement.</p>
-      <p>Role: Senior Unity Engineer, Tool Developer, and Game Design Collaboration</p>
-      <div class="video-placeholder">
-         <iframe width="560" height="315" src="https://www.youtube.com/embed/Up2njFRzq7o" title="Naxia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </article>
+                <!-- Navigation Links -->
+                <!-- 
+                  On mobile, this is a horizontal list.
+                  On desktop, it becomes a vertical list.
+                  The 'nav-links' class is used by JavaScript to find them.
+                -->
+                <ul classs="flex justify-center space-x-4 mt-4 md:flex-col md:space-x-0 md:space-y-3 nav-links">
+                    <li><a href="#welcome" class="nav-link block p-2 md:p-0 transition-colors duration-200 hover:text-white">Welcome</a></li>
+                    <li><a href="#projects" class="nav-link block p-2 md:p-0 transition-colors duration-200 hover:text-white">Projects</a></li>
+                    <li><a href="#resume" class="nav-link block p-2 md:p-0 transition-colors duration-200 hover:text-white">Resume</a></li>
+                    <li><a href="#contact" class="nav-link block p-2 md:p-0 transition-colors duration-200 hover:text-white">Contact</a></li>
+                </ul>
 
-    <article>
-      <h3>Rashin Studio, Iran, Tehran - Unity Engineer</h3>
-      <p>September 2017 – September 2018</p>
-      <p>Contrib  <p>Contributed to the development of mobile games such as "Saychin" and "Kashte." Identified bottlenecks and bugs, implementing solutions and analytics to improve game performance. Designed and implemented multiplayer architecture and developed proficiency in Git and SVN.</p>
-  <p>Role: Unity Engineer</p>
-  <div class="video-placeholder">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ITiSOzgitgU" title="Saychin Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-</article>
+                <!-- Contact & Links (Hidden on mobile, shown on desktop) -->
+                <div class="hidden md:block mt-12">
+                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Get in Touch</h3>
+                    <a href="mailto:your.email@example.com" class="block text-sm mt-3 transition-colors duration-200 hover:text-white">your.email@example.com</a>
+                    
+                    <a href="#" class="block w-full text-center bg-indigo-600 text-white rounded-lg py-2 mt-6 font-semibold transition-colors duration-200 hover:bg-indigo-500">
+                        LinkedIn
+                    </a>
+                    <a href="#" class="block w-full text-center bg-gray-700 text-white rounded-lg py-2 mt-3 font-semibold transition-colors duration-200 hover:bg-gray-600">
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </nav>
 
-<article>
-  <h3>Midopia, Rash Iran - Unity Engineer and Game Designer</h3>
-  <p>April 2014 – August 2017</p>
-  <p>Integrated media assets into functional games using Unity engine and C#. Utilized agile development methodologies and managed tasks using scrum. Published "Fractality" game, which won the Golden Badge for The Best Game of the Year at the 10th Digital Media Festival in Iran.</p>
-  <p>Role: Unity Engineer and Game Designer</p>
-  <div class="video-placeholder">
-  <iframe width="560" height="315" src="https://www.aparat.com/video/video/embed/videohash/0wVoi/vt/frame" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
-  </div>
+        <!-- 
+          MAIN CONTENT AREA
+          Mobile: Full width with padding-top to avoid the fixed header.
+          Desktop (md:): Takes up the remaining width with margin-left to avoid the sidebar.
+        -->
+        <main class="w-full pt-28 md:pt-0 md:ml-64">
+            
+            <div class="p-6 md:p-12 max-w-4xl mx-auto">
+                
+                <!-- 
+                  SECTION: WELCOME
+                  Each <section> has an ID that matches the nav link's href.
+                  The 'scroll-section' class is used by JavaScript to track scrolling.
+                -->
+                <section id="welcome" class="scroll-section min-h-screen mb-16">
+                    <!-- Hero Section -->
+                    <div class="h-64 md:h-96 bg-gray-300 rounded-lg flex items-center justify-center text-gray-500 overflow-hidden">
+                        <!-- 
+                          Placeholder for a hero image. 
+                          You can replace this div with:
+                          <img src="https://placehold.co/1200x400" alt="Hero background image" class="w-full h-full object-cover">
+                        -->
+                        (Your Hero Image or Background Here)
+                    </div>
 
-</article>
+                    <h1 class="text-4xl md:text-5xl font-bold mt-8">G'day! I'm [Your Name].</h1>
+                    <p class="text-xl text-gray-600 mt-4">
+                        I'm a hardworking, team-oriented programmer who strives to write clean, cache-friendly code. I'm always eager to learn and leverage my skills to facilitate unforgettable and narrative-driven experiences.
+                    </p>
+                    
+                    <!-- Columns for skills/philosophy -->
+                    <div class="grid md:grid-cols-3 gap-8 mt-12">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h3 class="text-xl font-semibold mb-3">I love working in teams</h3>
+                            <p class="text-gray-700">
+                                Over the years I've worked on several shipped titles and major franchises. Add your summary here.
+                            </p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h3 class="text-xl font-semibold mb-3">I'm an adept programmer</h3>
+                            <p class="text-gray-700">
+                                I love coding and design with a passion, and solving challenging problems. Add your summary here.
+                            </p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h3 class="text-xl font-semibold mb-3">I enjoy speaking & presenting</h3>
+                            <p class="text-gray-700">
+                                I believe everyone should be able to make things and that having diverse people brings a plethora of benefits. Add your summary here.
+                            </p>
+                        </div>
+                    </div>
+                </section>
 
-<!-- Add more articles for other work experiences, following the same structure -->
-</section>
+                <!-- 
+                  SECTION: PROJECTS
+                -->
+                <section id="projects" class="scroll-section min-h-screen mb-16">
+                    <h2 class="text-4xl font-bold border-b pb-4 mb-8">Professional Projects</h2>
+                    <p class="text-lg text-gray-600 mb-12">A sample of the projects that I've worked on over the years.</p>
+
+                    <!-- === PROJECT 1 === -->
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
+                        <!-- Project Media: Video or Screenshot -->
+                        <div class="bg-gray-300">
+                            <!-- 
+                              Screenshot Placeholder: 
+                              Replace with your <img> tag or an <iframe> for a video.
+                            -->
+                            <img src="https://placehold.co/1200x600/e2e8f0/64748b?text=Project+Screenshot+or+Video" 
+                                 alt="Project 1 Screenshot" 
+                                 class="w-full h-auto object-cover">
+                            <!-- 
+                              YouTube Video Embed Example (replace <iframe> above):
+                              <div class="aspect-w-16 aspect-h-9">
+                                <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                              </div>
+                            -->
+                        </div>
+
+                        <div class="p-8">
+                            <h3 class="text-3xl font-bold">Project Title (e.g., Call of Duty: Vanguard)</h3>
+                            <p class="text-indigo-500 font-semibold text-lg mt-1">Your Role (e.g., Senior Software Engineer | Core / Systems)</p>
+                            
+                            <div class="mt-6">
+                                <h4 class="text-xl font-semibold mb-2">Technical Summary</h4>
+                                <p class="text-gray-700">
+                                    This is where you provide a technical summary of the project. What was its goal? What was the main challenge?
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet.
+                                </p>
+                            </div>
+                            
+                            <div class="mt-6">
+                                <h4 class="text-xl font-semibold mb-2">Role & Responsibilities</h4>
+                                <p class="text-gray-700">
+                                    Describe your specific role and what you were responsible for. Did you lead a team? Were you responsible for a specific module?
+                                    Ut velit est, tempus manebant, egestas.
+                                </p>
+                            </div>
+
+                            <div class="mt-6">
+                                <h4 class="text-xl font-semibold mb-2">Research & Application</h4>
+                                <p class="text-gray-700">
+                                    Summarize how research (on architecture, algorithms, etc.) was applied to implement or improve the system.
+                                    For example, "We researched spatial hashing algorithms to optimize collision detection, resulting in a 30% performance increase."
+                                </p>
+                            </div>
+
+                            <div class="mt-6">
+                                <h4 class="text-xl font-semibold mb-2">Technologies & Tools</h4>
+                                <p class="text-gray-700">
+                                    <span class="font-semibold">Languages:</span> C++, C#, Python
+                                    <br>
+                                    <span class="font-semibold">Tools:</span> Unreal Engine, JIRA, Perforce, Visual Studio
+                                </p>
+                            </div>
+
+                            <!-- Links -->
+                            <div class="flex flex-wrap gap-4 mt-8">
+                                <a href="#" class="bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 hover:bg-indigo-500">
+                                    Official Website
+                                </a>
+                                <a href="#" class="bg-gray-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 hover:bg-gray-600">
+                                    Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- === END OF PROJECT 1 === -->
+
+                    <!-- === PROJECT 2 (Placeholder) === -->
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
+                        <div class="bg-gray-300">
+                            <img src="https://placehold.co/1200x600/e2e8f0/64748b?text=Project+2+Screenshot" 
+                                 alt="Project 2 Screenshot" 
+                                 class="w-full h-auto object-cover">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-3xl font-bold">Project Title 2</h3>
+                            <p class="text-indigo-500 font-semibold text-lg mt-1">Your Role</p>
+                            
+                            <div class="mt-6">
+                                <h4 class="text-xl font-semibold mb-2">Technical Summary</h4>
+                                <p class="text-gray-700">
+                                    Placeholder text for your project summary.
+                                </p>
+                            </div>
+                            
+                            <div class="flex flex-wrap gap-4 mt-8">
+                                <a href="#" class="bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 hover:bg-indigo-500">
+                                    Live Demo
+                                </a>
+                                <a href="#" class="bg-gray-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 hover:bg-gray-600">
+                                    Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- === END OF PROJECT 2 === -->
+
+                </section>
+
+                <!-- 
+                  SECTION: RESUME
+                -->
+                <section id="resume" class="scroll-section min-h-screen mb-16">
+                    <h2 class="text-4xl font-bold border-b pb-4 mb-8">Curriculum Vitae (CV) / Resume</h2>
+                    
+                    <a href="#" class="inline-block bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 hover:bg-indigo-500 text-lg mb-12">
+                        Download PDF Resume
+                    </a>
+
+                    <!-- You can also list your resume details directly -->
+                    
+                    <div class="space-y-12">
+                        <!-- Experience Section -->
+                        <div>
+                            <h3 class="text-3xl font-semibold text-indigo-700 mb-6">Experience</h3>
+                            <div class="space-y-8">
+                                <!-- Job 1 -->
+                                <div class="bg-white p-6 rounded-lg shadow-sm">
+                                    <h4 class="text-2xl font-bold">Senior Software Engineer</h4>
+                                    <p class="text-lg font-semibold text-gray-700">Company Name | 2020 - Present</p>
+                                    <ul class="list-disc list-inside mt-4 text-gray-700 space-y-2">
+                                        <li>Developed and maintained core systems for AAA titles.</li>
+                                        <li>Mentored junior engineers and conducted code reviews.</li>
+                                        <li>Optimized rendering pipelines for next-gen consoles.</li>
+                                    </ul>
+                                </div>
+                                <!-- Job 2 -->
+                                <div class="bg-white p-6 rounded-lg shadow-sm">
+                                    <h4 class="text-2xl font-bold">Software Engineer</h4>
+                                    <p class="text-lg font-semibold text-gray-700">Another Company | 2017 - 2020</p>
+                                    <ul class="list-disc list-inside mt-4 text-gray-700 space-y-2">
+                                        <li>Worked on gameplay mechanics for a successful indie title.</li>
+                                        <li>Implemented UI features and state management.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Education Section -->
+                        <div>
+                            <h3 class="text-3xl font-semibold text-indigo-700 mb-6">Education</h3>
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <h4 class="text-2xl font-bold">B.S. in Computer Science</h4>
+                                <p class="text-lg font-semibold text-gray-700">University of Technology | 2013 - 2017</p>
+                                <p class="mt-4 text-gray-700">Graduated with Honors, focusing on real-time graphics and AI.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 
+                  SECTION: CONTACT
+                -->
+                <section id="contact" class="scroll-section min-h-screen mb-16">
+                    <h2 class="text-4xl font-bold border-b pb-4 mb-8">Contact Me</h2>
+                    
+                    <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto text-center">
+                        <h3 class="text-3xl font-bold mb-4">Let's Connect!</h3>
+                        <p class="text-lg text-gray-700 mb-6">
+                            I'm currently seeking new opportunities. Whether you have a question, a project proposal, or just want to say hi, feel free to reach out.
+                        </p>
+                        
+                        <a href="mailto:your.email@example.com" class="inline-block bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 hover:bg-indigo-500 text-lg">
+                            Email Me
+                        </a>
+                        
+                        <div class="mt-8">
+                            <p class="text-gray-600">You can also find me on:</p>
+                            <div classs="flex justify-center gap-6 mt-4">
+                                <a href="#" class="text-indigo-600 hover:text-indigo-800 font-semibold">LinkedIn</a>
+                                <a href="#" class="text-indigo-600 hover:text-indigo-800 font-semibold">GitHub</a>
+                                <a href="#" class="text-indigo-600 hover:text-indigo-800 font-semibold">Twitter / X</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+            
+            <!-- Footer -->
+            <footer class="text-center p-8 text-gray-500 border-t bg-gray-50">
+                &copy; 2025 [Your Name]. All Rights Reserved.
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('a.nav-link');
+            const sections = document.querySelectorAll('section.scroll-section');
+
+            // --- Smooth Scrolling ---
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // --- Active Link on Scroll (Intersection Observer) ---
+            const observerOptions = {
+                root: null, // relative to the viewport
+                rootMargin: '0px',
+                // This threshold means the link becomes active when 50%
+                // of the section is visible. Adjust as needed.
+                threshold: 0.5 
+            };
+
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Get the ID of the visible section
+                        const visibleSectionId = entry.target.id;
+                        
+                        // Remove 'active' class from all nav links
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        
+                        // Add 'active' class to the corresponding nav link
+                        const activeLink = document.querySelector(`.nav-links a[href="#${visibleSectionId}"]`);
+                        if (activeLink) {
+                            activeLink.classList.add('active');
+                        }
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+            // Observe each section
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
