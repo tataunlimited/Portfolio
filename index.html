@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-g">
+    <meta charset="UTF-8"> <!-- Fixed charset -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Taher Samadi Shal - Game Programmer</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Font: Inter -->
@@ -66,15 +66,11 @@
 
     <!-- 
       Main container for the two-column layout.
-      On mobile (default): Full width, preparation for top-bar nav.
-      On medium screens and up (md:): A flex container for side-bar + main content.
     -->
     <div class="md:flex">
 
         <!-- 
           NAVIGATION SIDEBAR
-          Mobile: Fixed top bar.
-          Desktop (md:): Fixed left sidebar.
         -->
         <nav class="bg-gray-900 text-gray-300
                     fixed top-0 left-0 w-full z-50 p-5 shadow-lg
@@ -83,19 +79,14 @@
             <div class="md:sticky md:top-8">
                 <!-- Header: Your Name & Title -->
                 <div class="mb-8 hidden md:block">
-                    <h1 class="text-3xl font-bold text-white">Your Name</h1>
-                    <h2 class="text-lg text-indigo-300">Your Title (e.g., Software Engineer)</h2>
+                    <h1 class="text-3xl font-bold text-white">Taher Samadi Shal</h1>
+                    <h2 class="text-lg text-indigo-300">Game Programming & System's Design</h2>
                 </div>
                 
                 <!-- A title for mobile view, hidden on desktop -->
-                <h1 class="text-xl font-bold text-white md:hidden text-center">Your Name - Portfolio</h1>
+                <h1 class="text-xl font-bold text-white md:hidden text-center">Taher Samadi Shal</h1>
 
                 <!-- Navigation Links -->
-                <!-- 
-                  On mobile, this is a horizontal list.
-                  On desktop, it becomes a vertical list.
-                  The 'nav-links' class is used by JavaScript to find them.
-                -->
                 <ul class="flex justify-center space-x-4 mt-4 md:flex-col md:space-x-0 md:space-y-3 nav-links">
                     <li><a href="#welcome" class="nav-link block p-2 md:p-0 transition-all duration-200 hover:text-white">Welcome</a></li>
                     <li><a href="#projects" class="nav-link block p-2 md:p-0 transition-all duration-200 hover:text-white">Projects</a></li>
@@ -106,12 +97,12 @@
                 <!-- Contact & Links (Hidden on mobile, shown on desktop) -->
                 <div class="hidden md:block mt-12">
                     <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Get in Touch</h3>
-                    <a href="mailto:your.email@example.com" class="block text-sm mt-3 transition-colors duration-200 hover:text-white">your.email@example.com</a>
+                    <a href="mailto:Taher.samadi@gmail.com" class="block text-sm mt-3 transition-colors duration-200 hover:text-white">Taher.samadi@gmail.com</a>
                     
-                    <a href="#" class="block w-full text-center bg-indigo-600 text-white rounded-lg py-2 mt-6 font-semibold transition-colors duration-200 hover:bg-indigo-500">
+                    <a href="https.www.linkedin.com/in/taher-samadi-8343444a/" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-indigo-600 text-white rounded-lg py-2 mt-6 font-semibold transition-colors duration-200 hover:bg-indigo-500">
                         LinkedIn
                     </a>
-                    <a href="#" class="block w-full text-center bg-gray-700 text-white rounded-lg py-2 mt-3 font-semibold transition-colors duration-200 hover:bg-gray-600">
+                    <a href="[Your_GitHub_URL]" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-gray-700 text-white rounded-lg py-2 mt-3 font-semibold transition-colors duration-200 hover:bg-gray-600">
                         GitHub
                     </a>
                 </div>
@@ -120,8 +111,6 @@
 
         <!-- 
           MAIN CONTENT AREA
-          Mobile: Full width with padding-top to avoid the fixed header.
-          Desktop (md:): Takes up the remaining width with margin-left to avoid the sidebar.
         -->
         <main class="w-full pt-28 md:pt-0 md:ml-64">
             
@@ -129,43 +118,41 @@
                 
                 <!-- 
                   SECTION: WELCOME
-                  Each <section> has an ID that matches the nav link's href.
-                  The 'scroll-section' class is used by JavaScript to track scrolling.
                 -->
                 <section id="welcome" class="scroll-section min-h-screen mb-16">
                     <!-- Hero Section -->
                     <div class="h-64 md:h-96 bg-gray-300 rounded-lg flex items-center justify-center text-gray-500 overflow-hidden">
                         <!-- 
-                          Placeholder for a hero image. 
-                          You can replace this div with:
-                          <img src="https://placehold.co/1200x400" alt="Hero background image" class="w-full h-full object-cover">
+                          Replace this div with your own hero image
+                          <img src="images/my-hero-image.jpg" alt="Hero background image" class="w-full h-full object-cover">
                         -->
                         (Your Hero Image or Background Here)
                     </div>
 
-                    <h1 class="text-4xl md:text-5xl font-bold mt-8">G'day! I'm [Your Name].</h1>
+                    <h1 class="text-4xl md:text-5xl font-bold mt-8">Hello! I'm Taher.</h1>
                     <p class="text-xl text-gray-600 mt-4">
-                        I'm a hardworking, team-oriented programmer who strives to write clean, cache-friendly code. I'm always eager to learn and leverage my skills to facilitate unforgettable and narrative-driven experiences.
+                        I'm a game programmer focused on showcasing my ability to implement core systems and polish products for release. 
+                        This portfolio is a technical summary of the projects I've worked on, my specific roles, and how I've applied research to solve complex problems.
                     </p>
                     
                     <!-- Columns for skills/philosophy -->
                     <div class="grid md:grid-cols-3 gap-8 mt-12">
                         <div class="bg-white p-6 rounded-lg shadow-sm">
-                            <h3 class="text-xl font-semibold mb-3">I love working in teams</h3>
+                            <h3 class="text-xl font-semibold mb-3">Core Systems</h3>
                             <p class="text-gray-700">
-                                Over the years I've worked on several shipped titles and major franchises. Add your summary here.
+                                Experienced in developing base architecture, networking infrastructure, and core game logic.
                             </p>
                         </div>
                         <div class="bg-white p-6 rounded-lg shadow-sm">
-                            <h3 class="text-xl font-semibold mb-3">I'm an adept programmer</h3>
+                            <h3 class="text-xl font-semibold mb-3">AI & Pathfinding</h3>
                             <p class="text-gray-700">
-                                I love coding and design with a passion, and solving challenging problems. Add your summary here.
+                                Skilled in implementing and debugging AI behaviors, including A* pathfinding and navmesh solutions.
                             </p>
                         </div>
                         <div class="bg-white p-6 rounded-lg shadow-sm">
-                            <h3 class="text-xl font-semibold mb-3">I enjoy speaking & presenting</h3>
+                            <h3 class="text-xl font-semibold mb-3">Game Polish</h3>
                             <p class="text-gray-700">
-                                I believe everyone should be able to make things and that having diverse people brings a plethora of benefits. Add your summary here.
+                                Dedicated to finalizing products by handling bugs, refactoring systems, and polishing gameplay to an alpha state.
                             </p>
                         </div>
                     </div>
@@ -175,107 +162,185 @@
                   SECTION: PROJECTS
                 -->
                 <section id="projects" class="scroll-section min-h-screen mb-16">
-                    <h2 class="text-4xl font-bold border-b pb-4 mb-8">Professional Projects</h2>
-                    <p class="text-lg text-gray-600 mb-12">A sample of the projects that I've worked on over the years.</p>
+                    <h2 class="text-4xl font-bold border-b pb-4 mb-8">Projects</h2>
+                    <p class="text-lg text-gray-600 mb-12">A breakdown of my contributions to recent projects.</p>
 
-                    <!-- === PROJECT 1 === -->
+                    <!-- === PROJECT 1: Unannounced AAA project === -->
                     <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
-                        <!-- Project Media: Video or Screenshot -->
+                        <!-- Project Media: Your Diagram -->
                         <div class="bg-gray-300">
-                            <!-- 
-                              Screenshot Placeholder: 
-                              Replace with your <img> tag or an <iframe> for a video.
-                            -->
-                            <img src="https://placehold.co/1200x600/e2e8f0/64748b?text=Project+Screenshot+or+Video" 
-                                 alt="Project 1 Screenshot" 
+                            <!-- Create your diagram and save it as 'images/networking-diagram.png' -->
+                            <img src="https://placehold.co/1200x600/e2e8f0/64748b?text=High-Level+Architecture+Diagram" 
+                                 alt="High-level networking architecture" 
                                  class="w-full h-auto object-cover">
-                            <!-- 
-                              YouTube Video Embed Example (replace <iframe> above):
-                              <div class="aspect-w-16 aspect-h-9">
-                                <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                              </div>
-                            -->
                         </div>
 
                         <div class="p-8">
-                            <h3 class="text-3xl font-bold">Project Title (e.g., Call of Duty: Vanguard)</h3>
-                            <p class="text-indigo-500 font-semibold text-lg mt-1">Your Role (e.g., Senior Software Engineer | Core / Systems)</p>
+                            <h3 class="text-3xl font-bold">Unannounced AAA project</h3>
+                            <p class="text-indigo-500 font-semibold text-lg mt-1">Lead Programmer / System Designer (Mars Games)</p>
                             
                             <div class="mt-6">
                                 <h4 class="text-xl font-semibold mb-2">Technical Summary</h4>
                                 <p class="text-gray-700">
-                                    This is where you provide a technical summary of the project. What was its goal? What was the main challenge?
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet.
+                                    I focused on setting up a scalable networking infrastructure for an industry-scale project. This involved solving technical challenges using Unreal Engine and a suite of AWS services to build a robust backend for a live-service game.
                                 </p>
                             </div>
                             
                             <div class="mt-6">
                                 <h4 class="text-xl font-semibold mb-2">Role & Responsibilities</h4>
-                                <p class="text-gray-700">
-                                    Describe your specific role and what you were responsible for. Did you lead a team? Were you responsible for a specific module?
-                                    Ut velit est, tempus manebant, egestas.
-                                </p>
+                                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                    <li>Set up networking using AWS GameLift and implemented Unreal seamless travel.</li>
+                                    <li>Handled login and registration via AWS Cognito.</li>
+                                    <li>Used API Gateway and Lambda for serverless logic, with EC2 fleets for host servers.</li>
+                                    <li>Managed player data persistence using S3 and refactored the save system.</li>
+                                    <li>Designed high-level architecture diagrams and supported multiple server instances.</li>
+                                </ul>
                             </div>
 
                             <div class="mt-6">
                                 <h4 class="text-xl font-semibold mb-2">Research & Application</h4>
                                 <p class="text-gray-700">
-                                    Summarize how research (on architecture, algorithms, etc.) was applied to implement or improve the system.
-                                    For example, "We researched spatial hashing algorithms to optimize collision detection, resulting in a 30% performance increase."
+                                    To set up the networking infrastructure, I consulted technical articles and tutorials to ensure I was following industry-standard practices for modern, cloud-based game backends. My goal was to build a scalable architecture, so I applied research on using AWS services for a serverless backend, as well as engineering deep dives on how to scale online games to millions of players.
                                 </p>
                             </div>
 
                             <div class="mt-6">
                                 <h4 class="text-xl font-semibold mb-2">Technologies & Tools</h4>
                                 <p class="text-gray-700">
-                                    <span class="font-semibold">Languages:</span> C++, C#, Python
+                                    <span class="font-semibold">Technologies:</span> Unreal Engine, C++, AWS GameLift, AWS Lambda, API Gateway, AWS Cognito, EC2, S3
                                     <br>
-                                    <span class="font-semibold">Tools:</span> Unreal Engine, JIRA, Perforce, Visual Studio
+                                    <span class="font-semibold">Tools:</span> Visual Studio, Git, JIRA
                                 </p>
                             </div>
 
                             <!-- Links -->
                             <div class="flex flex-wrap gap-4 mt-8">
-                                <a href="#" class="bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 hover:bg-indigo-500">
-                                    Official Website
+                                <a href="#" class="bg-gray-400 text-gray-800 font-semibold py-2 px-6 rounded-lg cursor-not-allowed" aria-disabled="true">
+                                    Website (Unannounced)
                                 </a>
-                                <a href="#" class="bg-gray-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 hover:bg-gray-600">
-                                    Source Code
+                                <a href="#" class="bg-gray-400 text-gray-800 font-semibold py-2 px-6 rounded-lg cursor-not-allowed" aria-disabled="true">
+                                    Source Code (Private)
                                 </a>
                             </div>
                         </div>
                     </article>
                     <!-- === END OF PROJECT 1 === -->
 
-                    <!-- === PROJECT 2 (Placeholder) === -->
+                    <!-- === PROJECT 2: Waves of War === -->
                     <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
                         <div class="bg-gray-300">
-                            <img src="https://placehold.co/1200x600/e2e8f0/64748b?text=Project+2+Screenshot" 
-                                 alt="Project 2 Screenshot" 
+                            <!-- Replace with your screenshot or video -->
+                            <img src="https://placehold.co/1200x600/e2e8f0/64748b?text=Waves+of+War+Gameplay" 
+                                 alt="Waves of War Gameplay" 
                                  class="w-full h-auto object-cover">
                         </div>
                         <div class="p-8">
-                            <h3 class="text-3xl font-bold">Project Title 2</h3>
-                            <p class="text-indigo-500 font-semibold text-lg mt-1">Your Role</p>
+                            <h3 class="text-3xl font-bold">Waves of War</h3>
+                            <p class="text-indigo-500 font-semibold text-lg mt-1">Architecture & AI Programmer (GDMS Course Project)</p>
                             
                             <div class="mt-6">
                                 <h4 class="text-xl font-semibold mb-2">Technical Summary</h4>
                                 <p class="text-gray-700">
-                                    Placeholder text for your project summary.
+                                    This project was a 3D top-down battleship-like game. My contribution was to develop the base architecture for the entire game and implement a pathfinding solution for the ship's movement.
+                                </p>
+                            </div>
+
+                            <div class="mt-6">
+                                <h4 class="text-xl font-semibold mb-2">Role & Responsibilities</h4>
+                                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                    <li>Designed and developed the base code architecture using the MVVM pattern.</li>
+                                    <li>Implemented the A* pathfinding algorithm for all ship movement and navigation.</li>
+                                    <li>Ensured the game logic was decoupled from the UI/View.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mt-6">
+                                <h4 class="text-xl font-semibold mb-2">Research & Application</h4>
+                                <p class="text-gray-700">
+                                    For the *Waves of War* architecture, I researched practical software design patterns and implemented the MVVM pattern, which is used in AAA titles like *Gears 5* to decouple game logic from the visual code. I also studied AI pathfinding and applied that research by using the foundational A\* algorithm for the ships' movement.
+                                </p>
+                            </div>
+
+                            <div class="mt-6">
+                                <h4 class="text-xl font-semibold mb-2">Technologies & Tools</h4>
+                                <p class="text-gray-700">
+                                    <span class="font-semibold">Technologies:</span> [Unreal Engine or Unity], [C++ or C#], A* Pathfinding, MVVM Design Pattern
+                                    <br>
+                                    <span class="font-semibold">Tools:</span> [Visual Studio], [Git or Perforce]
                                 </p>
                             </div>
                             
                             <div class="flex flex-wrap gap-4 mt-8">
-                                <a href="#" class="bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 hover:bg-indigo-500">
-                                    Live Demo
+                                <!-- 
+                                <a href="[Link_To_Video]" class="bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 hover:bg-indigo-500">
+                                    Watch Gameplay
                                 </a>
-                                <a href="#" class="bg-gray-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 hover:bg-gray-600">
+                                -->
+                                <a href="[Link_To_GitHub]" class="bg-gray-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 hover:bg-gray-600">
                                     Source Code
                                 </a>
                             </div>
                         </div>
                     </article>
                     <!-- === END OF PROJECT 2 === -->
+                    
+                    <!-- === PROJECT 3: Dino Tank === -->
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
+                        <div class="bg-gray-300">
+                            <!-- Replace with your screenshot or video -->
+                            <img src="https://placehold.co/1200x600/e2e8f0/64748b?text=Dino+Tank+Gameplay" 
+                                 alt="Dino Tank Gameplay" 
+                                 class="w-full h-auto object-cover">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-3xl font-bold">Dino Tank</h3>
+                            <p class="text-indigo-500 font-semibold text-lg mt-1">AI & Polish Programmer (Capstone Project)</p>
+                            
+                            <div class="mt-6">
+                                <h4 class="text-xl font-semibold mb-2">Technical Summary</h4>
+                                <p class="text-gray-700">
+                                    This project is a 3D fantasy tank game. My role was to polish the game to an alpha state, which involved identifying and fixing critical bugs, primarily related to AI behavior and navigation.
+                                </p>
+                            </div>
+
+                            <div class="mt-6">
+                                <h4 class="text-xl font-semibold mb-2">Role & Responsibilities</h4>
+                                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                    <li>Investigated and fixed bugs related to spawning AI agents.</li>
+                                    <li>Resolved critical issues where an AI's target was outside the navmesh bounds, causing errors.</li>
+                                    <li>Refactored and polished AI code to bring the game to a stable alpha state.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mt-6">
+                                <h4 class="text-xl font-semibold mb-2">Research & Application</h4>
+                                <p class="text-gray-700">
+                                    My work on *Dino Tank* involved polishing the game to an alpha state, which required me to solve specific AI issues. To do this, I researched common challenges in AI navigation, specifically handling agents whose targets were outside the navmesh bounds and pathfinding in large worlds.
+                                </p>
+                            </div>
+
+                            <div class="mt-6">
+                                <h4 class="text-xl font-semibold mb-2">Technologies & Tools</h4>
+                                <p class="text-gray-700">
+                                    <span class="font-semibold">Technologies:</span> [Unreal Engine or Unity], [C++ or C#], AI Behavior Trees, Navmesh
+                                    <br>
+                                    <span class="font-semibold">Tools:</span> [Visual Studio], [Git or Perforce], JIRA
+                                </p>
+                            </div>
+                            
+                            <div class="flex flex-wrap gap-4 mt-8">
+                                <!-- 
+                                <a href="[Link_To_Video]" class="bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 hover:bg-indigo-500">
+                                    Watch Gameplay
+                                </a>
+                                -->
+                                <a href="[Link_To_GitHub]" class="bg-gray-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 hover:bg-gray-600">
+                                    Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- === END OF PROJECT 3 === -->
 
                 </section>
 
@@ -283,14 +348,13 @@
                   SECTION: RESUME
                 -->
                 <section id="resume" class="scroll-section min-h-screen mb-16">
-                    <h2 class="text-4xl font-bold border-b pb-4 mb-8">Curriculum Vitae (CV) / Resume</h2>
+                    <h2 class="text-4xl font-bold border-b pb-4 mb-8">Resume</h2>
                     
-                    <a href="#" class="inline-block bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 hover:bg-indigo-500 text-lg mb-12">
+                    <a href="[Taher_Samadi_Shal_Resume.pdf]" download class="inline-block bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 hover:bg-indigo-500 text-lg mb-12">
                         Download PDF Resume
                     </a>
 
-                    <!-- You can also list your resume details directly -->
-                    
+                    <!-- Resume details listed directly -->
                     <div class="space-y-12">
                         <!-- Experience Section -->
                         <div>
@@ -298,21 +362,20 @@
                             <div class="space-y-8">
                                 <!-- Job 1 -->
                                 <div class="bg-white p-6 rounded-lg shadow-sm">
-                                    <h4 class="text-2xl font-bold">Senior Software Engineer</h4>
-                                    <p class="text-lg font-semibold text-gray-700">Company Name | 2020 - Present</p>
+                                    <h4 class="text-2xl font-bold">Lead Programmer</h4>
+                                    <p class="text-lg font-semibold text-gray-700">Mars Games | [Dates]</p>
                                     <ul class="list-disc list-inside mt-4 text-gray-700 space-y-2">
-                                        <li>Developed and maintained core systems for AAA titles.</li>
-                                        <li>Mentored junior engineers and conducted code reviews.</li>
-                                        <li>Optimized rendering pipelines for next-gen consoles.</li>
+                                        <li>Promoted to Lead Programmer from Programmer/System Designer.</li>
+                                        <li>Architected and implemented scalable networking infrastructure using AWS.</li>
+                                        <li>Led design and refactoring of core systems like player data and server travel.</li>
                                     </ul>
                                 </div>
                                 <!-- Job 2 -->
                                 <div class="bg-white p-6 rounded-lg shadow-sm">
-                                    <h4 class="text-2xl font-bold">Software Engineer</h4>
-                                    <p class="text-lg font-semibold text-gray-700">Another Company | 2017 - 2020</p>
+                                    <h4 class="text-2xl font-bold">Game Programmer (Contract)</h4>
+                                    <p class="text-lg font-semibold text-gray-700">[Another Company] | [Dates]</p>
                                     <ul class="list-disc list-inside mt-4 text-gray-700 space-y-2">
-                                        <li>Worked on gameplay mechanics for a successful indie title.</li>
-                                        <li>Implemented UI features and state management.</li>
+                                        <li>[Add details of another job here]</li>
                                     </ul>
                                 </div>
                             </div>
@@ -322,9 +385,9 @@
                         <div>
                             <h3 class="text-3xl font-semibold text-indigo-700 mb-6">Education</h3>
                             <div class="bg-white p-6 rounded-lg shadow-sm">
-                                <h4 class="text-2xl font-bold">B.S. in Computer Science</h4>
-                                <p class="text-lg font-semibold text-gray-700">University of Technology | 2013 - 2017</p>
-                                <p class="mt-4 text-gray-700">Graduated with Honors, focusing on real-time graphics and AI.</p>
+                                <h4 class="text-2xl font-bold">Master of Science, Game Design</h4>
+                                <p class="text-lg font-semibold text-gray-700">Full Sail University | November 2025</p>
+                                <p class="mt-4 text-gray-700">Focus on Game Programming and System's Design.</p>
                             </div>
                         </div>
                     </div>
@@ -339,19 +402,18 @@
                     <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto text-center">
                         <h3 class="text-3xl font-bold mb-4">Let's Connect!</h3>
                         <p class="text-lg text-gray-700 mb-6">
-                            I'm currently seeking new opportunities. Whether you have a question, a project proposal, or just want to say hi, feel free to reach out.
+                            I'm currently seeking new opportunities. Feel free to reach out via email or connect with me on LinkedIn.
                         </p>
                         
-                        <a href="mailto:your.email@example.com" class="inline-block bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 hover:bg-indigo-500 text-lg">
-                            Email Me
+                        <a href="mailto:Taher.samadi@gmail.com" class="inline-block bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 hover:bg-indigo-500 text-lg">
+                            Email: Taher.samadi@gmail.com
                         </a>
                         
                         <div class="mt-8">
                             <p class="text-gray-600">You can also find me on:</p>
                             <div classs="flex justify-center gap-6 mt-4">
-                                <a href="#" class="text-indigo-600 hover:text-indigo-800 font-semibold">LinkedIn</a>
-                                <a href="#" class="text-indigo-600 hover:text-indigo-800 font-semibold">GitHub</a>
-                                <a href="#" class="text-indigo-600 hover:text-indigo-800 font-semibold">Twitter / X</a>
+                                <a href="https.www.linkedin.com/in/taher-samadi-8343444a/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-semibold">LinkedIn</a>
+                                <a href="[Your_GitHub_URL]" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-semibold">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -361,7 +423,7 @@
             
             <!-- Footer -->
             <footer class="text-center p-8 text-gray-500 border-t bg-gray-50">
-                &copy; 2025 [Your Name]. All Rights Reserved.
+                &copy; 2025 Taher Samadi Shal. All Rights Reserved.
             </footer>
 
         </main>
