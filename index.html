@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-g">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taher Samadi Shal - Portfolio</title>
+    <title>Your Name - Portfolio</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Font: Inter -->
@@ -33,6 +33,32 @@
             section[id] {
                 scroll-margin-top: 24px;
             }
+
+            /* --- Active Nav Link Styling (Desktop) --- */
+            
+            /* Prepare list items for positioning the bullet */
+            .nav-links li {
+                position: relative; 
+            }
+            
+            /* Style for desktop active nav link: indent text */
+            .nav-link.active {
+                padding-left: 1.25rem; /* Indent the text (20px) */
+            }
+            
+            /* The bullet point for the active link */
+            .nav-link.active::before {
+                content: '•';
+                position: absolute;
+                left: 0.25rem; /* Position the bullet (4px) */
+                top: 50%;
+                /* Vertically center the bullet */
+                transform: translateY(-50%);
+                font-size: 1.25rem; 
+                line-height: 1;
+                color: #818cf8; /* Match the active color */
+            }
+            /* --- End Active Nav Link Styling --- */
         }
     </style>
 </head>
@@ -71,10 +97,10 @@
                   The 'nav-links' class is used by JavaScript to find them.
                 -->
                 <ul classs="flex justify-center space-x-4 mt-4 md:flex-col md:space-x-0 md:space-y-3 nav-links">
-                    <li><a href="#welcome" class="nav-link block p-2 md:p-0 transition-colors duration-200 hover:text-white">Welcome</a></li>
-                    <li><a href="#projects" class="nav-link block p-2 md:p-0 transition-colors duration-200 hover:text-white">Projects</a></li>
-                    <li><a href="#resume" class="nav-link block p-2 md:p-0 transition-colors duration-200 hover:text-white">Resume</a></li>
-                    <li><a href="#contact" class="nav-link block p-2 md:p-0 transition-colors duration-200 hover:text-white">Contact</a></li>
+                    <li><a href="#welcome" class="nav-link block p-2 md:p-0 transition-all duration-200 hover:text-white">Welcome</a></li>
+                    <li><a href="#projects" class="nav-link block p-2 md:p-0 transition-all duration-200 hover:text-white">Projects</a></li>
+                    <li><a href="#resume" class="nav-link block p-2 md:p-0 transition-all duration-200 hover:text-white">Resume</a></li>
+                    <li><a href="#contact" class="nav-link block p-2 md:p-0 transition-all duration-200 hover:text-white">Contact</a></li>
                 </ul>
 
                 <!-- Contact & Links (Hidden on mobile, shown on desktop) -->
