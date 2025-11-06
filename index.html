@@ -10,6 +10,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- === NEW: Splide.js CDN (for the slideshow) === -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
     <style>
         /* Custom styles */
         body {
@@ -60,18 +65,38 @@
             }
             /* --- End Active Nav Link Styling --- */
         }
+
+        /* === NEW: Custom Splide.js Styles === */
+        /* Style for the arrows */
+        .splide__arrow {
+            background: rgba(45, 55, 72, 0.7); /* A semi-transparent dark bg */
+        }
+        .splide__arrow svg {
+            fill: #e0e7ff; /* Light indigo for the arrow icon */
+        }
+        
+        /* Style for the pagination dots */
+        .splide__pagination__page {
+            background: #a5b4fc; /* A lighter indigo */
+            opacity: 0.7;
+        }
+        .splide__pagination__page.is-active {
+            background: #818cf8; /* Your site's active indigo color */
+            opacity: 1;
+            transform: scale(1.2); /* Make the active dot a bit bigger */
+        }
     </style>
 </head>
 <body class="text-gray-800">
 
     <!-- 
       Main container for the two-column layout.
-    -->
+     -->
     <div class="md:flex">
 
         <!-- 
           NAVIGATION SIDEBAR
-        -->
+         -->
         <nav class="bg-gray-900 text-gray-300
                     fixed top-0 left-0 w-full z-50 p-5 shadow-lg
                     md:w-64 md:min-h-screen md:p-8 md:shadow-none">
@@ -111,22 +136,22 @@
 
         <!-- 
           MAIN CONTENT AREA
-        -->
+         -->
         <main class="w-full pt-28 md:pt-0 md:ml-64">
             
             <div class="p-6 md:p-12 max-w-4xl mx-auto">
                 
                 <!-- 
                   SECTION: WELCOME
-                -->
+                 -->
                 <section id="welcome" class="scroll-section min-h-screen mb-16">
                     <!-- Hero Section -->
                     <div class="h-64 md:h-96 bg-gray-300 rounded-lg flex items-center justify-center text-gray-500 overflow-hidden">
                         <!-- 
                         (Your Hero Image or Background Here)
                           Replace this div with your own hero image
-                        -->
-                        <img src="images/welcome-background.jpg" alt="Hero Background" class="w-full h-full object-cover">
+                         -->
+                        <img src="Images/welcome-background.jpg" alt="Hero Background" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Welcome+Image'">
                     </div>
 
                     <h1 class="text-4xl md:text-5xl font-bold mt-8">Hello! I'm Taher.</h1>
@@ -160,7 +185,7 @@
 
                 <!-- 
                   SECTION: PROJECTS
-                -->
+                 -->
                 <section id="projects" class="scroll-section min-h-screen mb-16">
                     <h2 class="text-4xl font-bold border-b pb-4 mb-8">Projects</h2>
                     <p class="text-lg text-gray-600 mb-12">A breakdown of my contributions to recent projects.</p>
@@ -170,7 +195,7 @@
                         <!-- Project Media: Your Diagram -->
                         <div class="bg-gray-300">
                             <!-- Create your diagram and save it as 'images/networking-diagram.png' -->
-                            <img src="https://placehold.co/1200x600/e2e8f0/64748b?text=High-Level+Architecture+Diagram" 
+                            <img src="Images/AAA/image4.png" 
                                  alt="High-level networking architecture" 
                                  class="w-full h-auto object-cover">
                         </div>
@@ -228,12 +253,26 @@
 
                     <!-- === PROJECT 2: Waves of War === -->
                     <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
-                        <div class="bg-gray-300">
-                            <!-- Replace with your screenshot or video -->
-                            <img src="https://placehold.co/1200x600/e2e8f0/64748b?text=Waves+of+War+Gameplay" 
-                                 alt="Waves of War Gameplay" 
-                                 class="w-full h-auto object-cover">
-                        </div>
+                        
+                        <!-- === UPDATED: WAVES OF WAR SLIDESHOW === -->
+                        <section class="splide waves-of-war-splide" aria-label="Waves of War Gameplay Slideshow">
+                          <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <!-- === IMPORTANT: Change these image paths === -->
+                                        <img src="Images/WavesOfWar/image5.png" alt="Waves of War Image 1" class="w-full h-auto object-cover" onerror="this.src='https.placehold.co/1200x600/e2e8f0/64748b?text=Image+1'">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="Images/WavesOfWar/image6.png" alt="Waves of War Image 2" class="w-full h-auto object-cover" onerror="this.src='https.placehold.co/1200x600/e2e8f0/64748b?text=Image+2'">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="Images/WavesOfWar/image8.png" alt="Waves of War Image 3" class="w-full h-auto object-cover" onerror="this.src='https.placehold.co/1200x600/e2e8f0/64748b?text=Image+3'">
+                                    </li>
+                                </ul>
+                          </div>
+                        </section>
+                        <!-- === END OF SLIDESHOW === -->
+
                         <div class="p-8">
                             <h3 class="text-3xl font-bold">Waves of War</h3>
                             <p class="text-indigo-500 font-semibold text-lg mt-1">Architecture & AI Programmer (GDMS Course Project)</p>
@@ -286,12 +325,26 @@
                     
                     <!-- === PROJECT 3: Dino Tank === -->
                     <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
-                        <div class="bg-gray-300">
-                            <!-- Replace with your screenshot or video -->
-                            <img src="https://placehold.co/1200x600/e2e8f0/64748b?text=Dino+Tank+Gameplay" 
-                                 alt="Dino Tank Gameplay" 
-                                 class="w-full h-auto object-cover">
-                        </div>
+                        
+                        <!-- === UPDATED: DINO TANK SLIDESHOW === -->
+                        <section class="splide dino-tank-splide" aria-label="Dino Tank Gameplay Slideshow">
+                          <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <!-- === IMPORTANT: Change these image paths === -->
+                                        <img src="Images/DinoTank/image1.png" alt="Dino Tank Image 1" class="w-full h-auto object-cover" onerror="this.src='https.placehold.co/1200x600/e2e8f0/64748b?text=Image+1'">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="Images/DinoTank/image3.png" alt="Dino Tank Image 2" class="w-full h-auto object-cover" onerror="this.src='https.placehold.co/1200x600/e2e8f0/64748b?text=Image+2'">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="Images/DinoTank/image7.png" alt="Dino Tank Image 3" class="w-full h-auto object-cover" onerror="this.src='https.placehold.co/1200x600/e2e8f0/64748b?text=Image+3'">
+                                    </li>
+                                </ul>
+                          </div>
+                        </section>
+                        <!-- === END OF SLIDESHOW === -->
+
                         <div class="p-8">
                             <h3 class="text-3xl font-bold">Dino Tank</h3>
                             <p class="text-indigo-500 font-semibold text-lg mt-1">AI & Polish Programmer (Capstone Project)</p>
@@ -346,7 +399,7 @@
 
                 <!-- 
                   SECTION: RESUME
-                -->
+                 -->
                 <section id="resume" class="scroll-section min-h-screen mb-16">
                     <h2 class="text-4xl font-bold border-b pb-4 mb-8">Resume</h2>
                     
@@ -395,7 +448,7 @@
 
                 <!-- 
                   SECTION: CONTACT
-                -->
+                 -->
                 <section id="contact" class="scroll-section min-h-screen mb-16">
                     <h2 class="text-4xl font-bold border-b pb-4 mb-8">Contact Me</h2>
                     
@@ -411,7 +464,7 @@
                         
                         <div class="mt-8">
                             <p class="text-gray-600">You can also find me on:</p>
-                            <div classs="flex justify-center gap-6 mt-4">
+                            <div class="flex justify-center gap-6 mt-4"> <!-- Corrected 'classs' to 'class' -->
                                 <a href="https.www.linkedin.com/in/taher-samadi-8343444a/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-semibold">LinkedIn</a>
                                 <a href="[Your_GitHub_URL]" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-semibold">GitHub</a>
                             </div>
@@ -487,6 +540,31 @@
             sections.forEach(section => {
                 observer.observe(section);
             });
+
+            // === NEW: Initialize Slideshows ===
+            // First, check if the Splide library has loaded
+            if (typeof Splide !== 'undefined') {
+
+                // Initialize Dino Tank Slideshow
+                new Splide('.dino-tank-splide', {
+                    type        : 'loop',   // Loops back to the start
+                    autoplay    : true,   // Automatically advances slides
+                    interval    : 4000,   // 4 seconds per slide
+                    pauseOnHover: true,   // Pauses when you hover over it
+                }).mount();
+
+                // Initialize Waves of War Slideshow
+                new Splide('.waves-of-war-splide', {
+                    type        : 'loop',
+                    autoplay    : true,
+                    interval    : 4500, // Slightly different interval
+                    pauseOnHover: true,
+                }).mount();
+
+            } else {
+                console.error('Splide.js library not loaded.');
+            }
+            // === END OF NEW SCRIPT ===
         });
     </script>
 </body>
