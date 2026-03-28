@@ -1,117 +1,87 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8"> <!-- Fixed charset -->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taher Samadi Shal - Game Programmer</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Font: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- === NEW: Splide.js CDN (for the slideshow) === -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
     <style>
-        /* Custom styles */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f4f4f5; /* A light gray background for the content */
+            background-color: #f4f4f5;
         }
         
-        /* Style for the active navigation link */
         .nav-link.active {
-            color: #818cf8; /* An indigo color for the active link */
+            color: #818cf8;
             font-weight: 600;
         }
 
-        /* Offset for the fixed header on anchor link navigation */
         section[id] {
-            scroll-margin-top: 100px; /* Adjust this value to match your header height */
+            scroll-margin-top: 100px;
         }
         
         @media (min-width: 768px) {
-             /* Offset for the fixed sidebar on desktop */
             section[id] {
                 scroll-margin-top: 24px;
             }
 
-            /* --- Active Nav Link Styling (Desktop) --- */
-            
-            /* Prepare list items for positioning the bullet */
             .nav-links li {
                 position: relative; 
             }
             
-            /* Style for desktop active nav link: indent text */
             .nav-link.active {
-                padding-left: 1.25rem; /* Indent the text (20px) */
+                padding-left: 1.25rem;
             }
             
-            /* The bullet point for the active link */
             .nav-link.active::before {
                 content: '•';
                 position: absolute;
-                left: 0.25rem; /* Position the bullet (4px) */
+                left: 0.25rem;
                 top: 50%;
-                /* Vertically center the bullet */
                 transform: translateY(-50%);
                 font-size: 1.25rem; 
                 line-height: 1;
-                color: #818cf8; /* Match the active color */
+                color: #818cf8;
             }
-            /* --- End Active Nav Link Styling --- */
         }
 
-        /* === NEW: Custom Splide.js Styles === */
-        /* Style for the arrows */
         .splide__arrow {
-            background: rgba(45, 55, 72, 0.7); /* A semi-transparent dark bg */
+            background: rgba(45, 55, 72, 0.7);
         }
         .splide__arrow svg {
-            fill: #e0e7ff; /* Light indigo for the arrow icon */
+            fill: #e0e7ff;
         }
         
-        /* Style for the pagination dots */
         .splide__pagination__page {
-            background: #a5b4fc; /* A lighter indigo */
+            background: #a5b4fc;
             opacity: 0.7;
         }
         .splide__pagination__page.is-active {
-            background: #818cf8; /* Your site's active indigo color */
+            background: #818cf8;
             opacity: 1;
-            transform: scale(1.2); /* Make the active dot a bit bigger */
+            transform: scale(1.2);
         }
     </style>
 </head>
 <body class="text-gray-800">
 
-    <!-- 
-      Main container for the two-column layout.
-     -->
     <div class="md:flex">
-
-        <!-- 
-          NAVIGATION SIDEBAR
-         -->
-        <nav class="bg-gray-900 text-gray-300
-                    fixed top-0 left-0 w-full z-50 p-5 shadow-lg
-                    md:w-64 md:min-h-screen md:p-8 md:shadow-none">
-            
+        <nav class="bg-gray-900 text-gray-300 fixed top-0 left-0 w-full z-50 p-5 shadow-lg md:w-64 md:min-h-screen md:p-8 md:shadow-none">
             <div class="md:sticky md:top-8">
-                <!-- Header: Your Name & Title -->
                 <div class="mb-8 hidden md:block">
                     <h1 class="text-3xl font-bold text-white">Taher Samadi Shal</h1>
                     <h2 class="text-lg text-indigo-300">Game Programming & System's Design</h2>
                 </div>
                 
-                <!-- A title for mobile view, hidden on desktop -->
                 <h1 class="text-xl font-bold text-white md:hidden text-center">Taher Samadi Shal</h1>
 
-                <!-- Navigation Links -->
                 <ul class="flex justify-center space-x-4 mt-4 md:flex-col md:space-x-0 md:space-y-3 nav-links">
                     <li><a href="#welcome" class="nav-link block p-2 md:p-0 transition-all duration-200 hover:text-white">Welcome</a></li>
                     <li><a href="#projects" class="nav-link block p-2 md:p-0 transition-all duration-200 hover:text-white">Projects</a></li>
@@ -119,16 +89,12 @@
                     <li><a href="#contact" class="nav-link block p-2 md:p-0 transition-all duration-200 hover:text-white">Contact</a></li>
                 </ul>
 
-                <!-- Contact & Links (Hidden on mobile, shown on desktop) -->
                 <div class="hidden md:block mt-12">
                     <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Get in Touch</h3>
                     <a href="mailto:Taher.samadi@gmail.com" class="block text-sm mt-3 transition-colors duration-200 hover:text-white">Taher.samadi@gmail.com</a>
-                    
-                    <!-- === FIXED LINKEDIN URL === -->
                     <a href="https://www.linkedin.com/in/taher-samadi-8343444a/" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-indigo-600 text-white rounded-lg py-2 mt-6 font-semibold transition-colors duration-200 hover:bg-indigo-500">
                         LinkedIn
                     </a>
-                    <!-- === FIXED GITHUB URL === -->
                     <a href="https://github.com/tataunlimited" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-gray-700 text-white rounded-lg py-2 mt-3 font-semibold transition-colors duration-200 hover:bg-gray-600">
                         GitHub
                     </a>
@@ -136,23 +102,11 @@
             </div>
         </nav>
 
-        <!-- 
-          MAIN CONTENT AREA
-         -->
         <main class="w-full pt-28 md:pt-0 md:ml-64">
-            
             <div class="p-6 md:p-12 max-w-4xl mx-auto">
                 
-                <!-- 
-                  SECTION: WELCOME
-                 -->
                 <section id="welcome" class="scroll-section min-h-screen mb-16">
-                    <!-- Hero Section -->
                     <div class="h-64 md:h-96 bg-gray-300 rounded-lg flex items-center justify-center text-gray-500 overflow-hidden">
-                        <!-- 
-                        (Your Hero Image or Background Here)
-                          Replace this div with your own hero image
-                         -->
                         <img src="Images/welcome-background.jpg" alt="Hero Background" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Welcome+Image'">
                     </div>
 
@@ -162,55 +116,36 @@
                         This portfolio is a technical summary of the projects I've worked on, my specific roles, and how I've applied research to solve complex problems.
                     </p>
                     
-                    <!-- Columns for skills/philosophy -->
                     <div class="grid md:grid-cols-3 gap-8 mt-12">
                         <div class="bg-white p-6 rounded-lg shadow-sm">
                             <h3 class="text-xl font-semibold mb-3">Core Systems</h3>
-                            <p class="text-gray-700">
-                                Experienced in developing base architecture, networking infrastructure, and core game logic.
-                            </p>
+                            <p class="text-gray-700">Experienced in developing base architecture, networking infrastructure, and core game logic.</p>
                         </div>
                         <div class="bg-white p-6 rounded-lg shadow-sm">
                             <h3 class="text-xl font-semibold mb-3">AI & Pathfinding</h3>
-                            <p class="text-gray-700">
-                                Skilled in implementing and debugging AI behaviors, including A* pathfinding and navmesh solutions.
-                            </p>
+                            <p class="text-gray-700">Skilled in implementing and debugging AI behaviors, including A* pathfinding and navmesh solutions.</p>
                         </div>
                         <div class="bg-white p-6 rounded-lg shadow-sm">
                             <h3 class="text-xl font-semibold mb-3">Game Polish</h3>
-                            <p class="text-gray-700">
-                                Dedicated to finalizing products by handling bugs, refactoring systems, and polishing gameplay to an alpha state.
-                            </p>
+                            <p class="text-gray-700">Dedicated to finalizing products by handling bugs, refactoring systems, and polishing gameplay to an alpha state.</p>
                         </div>
                     </div>
                 </section>
 
-                <!-- 
-                  SECTION: PROJECTS
-                 -->
                 <section id="projects" class="scroll-section min-h-screen mb-16">
                     <h2 class="text-4xl font-bold border-b pb-4 mb-8">Projects</h2>
-                    <p class="text-lg text-gray-600 mb-12">A breakdown of my contributions to recent projects.</p>
 
-                    <!-- === PROJECT 1: Unannounced AAA project === -->
                     <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
-                        <!-- Project Media: Your Diagram -->
                         <div class="bg-gray-300">
-                            <!-- Create your diagram and save it as 'images/networking-diagram.png' -->
-                            <img src="Images/AAA/image1.png" 
-                                 alt="High-level networking architecture" 
-                                 class="w-full h-auto object-cover">
+                            <img src="Images/AAA/image1.png" alt="High-level networking architecture" class="w-full h-auto object-cover">
                         </div>
-
                         <div class="p-8">
                             <h3 class="text-3xl font-bold">Unannounced AAA project</h3>
                             <p class="text-indigo-500 font-semibold text-lg mt-1">Lead Programmer / System Designer (Mars Games)</p>
                             
                             <div class="mt-6">
                                 <h4 class="text-xl font-semibold mb-2">Technical Summary</h4>
-                                <p class="text-gray-700">
-                                    I focused on setting up a scalable networking infrastructure for an industry-scale project. This involved solving technical challenges using Unreal Engine and a suite of AWS services to build a robust backend for a live-service game.
-                                </p>
+                                <p class="text-gray-700">I focused on setting up a scalable networking infrastructure for an industry-scale project. This involved solving technical challenges using Unreal Engine and a suite of AWS services to build a robust backend for a live-service game.</p>
                             </div>
                             
                             <div class="mt-6">
@@ -226,267 +161,256 @@
 
                             <div class="mt-6">
                                 <h4 class="text-xl font-semibold mb-2">Research & Application</h4>
-                                <p class="text-gray-700">
-                                    To set up the networking infrastructure, I consulted technical articles and tutorials to ensure I was following industry-standard practices for modern, cloud-based game backends. My goal was to build a scalable architecture, so I applied research on using AWS services for a serverless backend, as well as engineering deep dives on how to scale online games to millions of players.
-                                </p>
+                                <p class="text-gray-700">To set up the networking infrastructure, I consulted technical articles and tutorials to ensure I was following industry-standard practices for modern, cloud-based game backends. My goal was to build a scalable architecture, so I applied research on using AWS services for a serverless backend, as well as engineering deep dives on how to scale online games to millions of players.</p>
                             </div>
 
                             <div class="mt-6">
                                 <h4 class="text-xl font-semibold mb-2">Technologies & Tools</h4>
-                                <p class="text-gray-700">
-                                    <span class="font-semibold">Technologies:</span> Unreal Engine, C++, AWS GameLift, AWS Lambda, API Gateway, AWS Cognito, EC2, S3
-                                    <br>
-                                    <span class="font-semibold">Tools:</span> Visual Studio, Git, JIRA
-                                </p>
+                                <p class="text-gray-700"><span class="font-semibold">Technologies:</span> Unreal Engine, C++, AWS GameLift, AWS Lambda, API Gateway, AWS Cognito, EC2, S3</p>
                             </div>
-
-                            <!-- Links -->
-                           
                         </div>
                     </article>
-                    <!-- === END OF PROJECT 1 === -->
 
-                    <!-- === PROJECT 2: Waves of War === -->
                     <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
-                        
-                        <!-- === UPDATED: WAVES OF WAR SLIDESHOW === -->
-                        <section class="splide waves-of-war-splide" aria-label="Waves of War Gameplay Slideshow">
+                        <section class="splide novathera-splide" aria-label="Warriors of Nova Thera Gameplay Slideshow">
                           <div class="splide__track">
                                 <ul class="splide__list">
                                     <li class="splide__slide">
-                                        <!-- === IMPORTANT: Change these image paths === -->
-                                        <img src="Images/WavesOfWar/image5.png" alt="Waves of War Image 1" class="w-full h-auto object-cover" onerror="this.src='https.placehold.co/1200x600/e2e8f0/64748b?text=Image+1'">
+                                        <img src="Images/NovaThera/1.jpg" alt="Nova Thera Slide 1" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Nova+Thera+Image+1'">
                                     </li>
                                     <li class="splide__slide">
-                                        <img src="Images/WavesOfWar/image6.png" alt="Waves of War Image 2" class="w-full h-auto object-cover" onerror="this.src='https.placehold.co/1200x600/e2e8f0/64748b?text=Image+2'">
+                                        <img src="Images/NovaThera/2.jpg" alt="Nova Thera Slide 2" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Nova+Thera+Image+2'">
                                     </li>
-                                    <li class="splide__slide">
-                                        <img src="Images/WavesOfWar/image8.png" alt="Waves of War Image 3" class="w-full h-auto object-cover" onerror="this.src='https.placehold.co/1200x600/e2e8f0/64748b?text=Image+3'">
+									 <li class="splide__slide">
+                                        <img src="Images/NovaThera/3.jpg" alt="Nova Thera Slide 2" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Nova+Thera+Image+2'">
                                     </li>
-                                    <li class="splide__slide">
-                                        <img src="Images/WavesOfWar/image1.png" alt="Waves of War Image 3" class="w-full h-auto object-cover" onerror="this.src='https.placehold.co/1200x600/e2e8f0/64748b?text=Image+3'">
+									 <li class="splide__slide">
+                                        <img src="Images/NovaThera/4.jpg" alt="Nova Thera Slide 2" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Nova+Thera+Image+2'">
                                     </li>
                                 </ul>
                           </div>
                         </section>
-                        <!-- === END OF SLIDESHOW === -->
 
+                        <div class="p-8">
+                            <h3 class="text-3xl font-bold">Warriors of Nova Thera</h3>
+                            <p class="text-indigo-500 font-semibold text-lg mt-1">Lead Unity Programmer (LiquidX)</p>
+                            
+                            <div class="mt-6">
+                                <h4 class="text-xl font-semibold mb-2">Project Overview</h4>
+                                <p class="text-gray-700">Warriors of Nova Thera is a fast-paced roguelike featuring Pixelmon characters. As Lead Unity Programmer, I oversaw the technical architecture and core development through a successful Closed Beta release on Steam. My focus was on creating deep progression systems and a highly replayable, procedurally generated world.</p>
+                            </div>
+
+                            <div class="mt-6">
+                                <h4 class="text-xl font-semibold mb-2">Key Technical Contributions</h4>
+                                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                    <li><strong>Multiplayer Architecture:</strong> Integrated Photon Fusion to provide a high-performance, synchronized multiplayer experience.</li>
+                                    <li><strong>Procedural World Building:</strong> Developed a custom hexagonal random map generation system, creating unique layouts for every run.</li>
+                                    <li><strong>Progression & Skill Systems:</strong> Engineered a complex player growth framework featuring skill upgrades, level-based rarity scaling, and persistent ability unlocks.</li>
+                                    <li><strong>Physics & Gameplay:</strong> Designed character movement, physics-based interactions, and combat loops to ensure a responsive, "game-feel" focused experience.</li>
+                                    <li><strong>Dynamic Balancing:</strong> Built an intelligent enemy spawn and reward system that scales difficulty and loot based on real-time player progression.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mt-6">
+                                <h4 class="text-xl font-semibold mb-2">Leadership & Optimization</h4>
+                                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                    <li><strong>Technical Oversight:</strong> Directed the development of Enemy AI and UI systems, ensuring they integrated seamlessly with the core gameplay architecture.</li>
+                                    <li><strong>Performance Engineering:</strong> Optimized the game for Steam’s hardware standards, balancing high-fidelity assets with the performance demands of procedural generation and multiplayer.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mt-8">
+                                <a href="https://store.steampowered.com/app/2913760/Warriors_of_Nova_Thera/" target="_blank" rel="noopener noreferrer" class="inline-block bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 hover:bg-indigo-500">
+                                    View on Steam
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
+						<div class="bg-gray-100 p-8 flex items-center justify-center">
+						<img src="Images/TCG/1.png" 
+             alt="Emergents TCG Cards" 
+             class="max-h-[400px] w-auto object-contain" 
+             onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=TCG+Card+Game'">
+						</div>
+						<div class="p-8">
+							<h3 class="text-3xl font-bold">Emergents TCG</h3>
+							<p class="text-indigo-500 font-semibold text-lg mt-1">Lead Programmer (DoubleCoconut)</p>
+							
+							<div class="mt-6">
+								<h4 class="text-xl font-semibold mb-2">Project Overview</h4>
+								<p class="text-gray-700">Emergents TCG was a high-performance, multiplayer turn-based card game built in Unity 3D. As Lead Programmer, I spearheaded a two-year development cycle from conception through a successful Open Beta release. While the project was later cancelled for non-technical reasons, the architecture remained rock-solid, supporting cross-platform play and competitive integrity.</p>
+							</div>
+
+							<div class="mt-6">
+								<h4 class="text-xl font-semibold mb-2">Technical Contributions</h4>
+								<ul class="list-disc list-inside text-gray-700 space-y-2">
+									<li><strong>Network Architecture:</strong> Implemented Photon PUN 2 for real-time multiplayer synchronization.</li>
+									<li><strong>Security & Fair Play:</strong> Engineered a server-authoritative rules engine executed on a relay server to prevent client-side cheating and ensure gameplay consistency.</li>
+									<li><strong>Cross-Platform Engineering:</strong> Optimized performance and managed Build Automation for a simultaneous release on macOS, Windows, Android, and WebGL.</li>
+									<li><strong>Core Systems:</strong> Developed high-fidelity UI systems, core gameplay loops, and state-management frameworks tailored for complex TCG mechanics.</li>
+								</ul>
+							</div>
+
+							<div class="mt-6">
+								<h4 class="text-xl font-semibold mb-2">Leadership & Challenges</h4>
+								<ul class="list-disc list-inside text-gray-700 space-y-2">
+									<li><strong>Technical Orchestration:</strong> Coordinated technical requirements and API integrations across five distinct teams: Unity, Rules Engine, Art, Backend, and Design.</li>
+									<li><strong>Agile Delivery:</strong> Established a rapid deployment pipeline, consistently delivering stable weekly builds to stakeholders and testers.</li>
+									<li><strong>Platform Optimization:</strong> Overcame significant performance hurdles to maintain a unified experience across mobile and web-based browsers.</li>
+								</ul>
+							</div>
+						</div>
+					</article>
+
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
+                        <section class="splide naxia-splide" aria-label="Naxia Gameplay Slideshow">
+                          <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <img src="Images/Naxia/1.jpg" alt="Naxia Slide 1" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Naxia+Image+1'">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="Images/Naxia/2.jpg" alt="Naxia Slide 2" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Naxia+Image+2'">
+                                    </li>
+                                </ul>
+                          </div>
+                        </section>
+
+                        <div class="p-8">
+                            <h3 class="text-3xl font-bold">Naxia</h3>
+                            <p class="text-indigo-500 font-semibold text-lg mt-1">Senior Unity Engineer (Badbadake Haft Aseman)</p>
+                            
+                            <div class="mt-6">
+                                <h4 class="text-xl font-semibold mb-2">Project Overview</h4>
+                                <p class="text-gray-700">Naxia merges old-school action-RPGs with modern rogue-lites. As Senior Unity Engineer, I led technical development to secure a high-quality Steam release, focusing on scalable systems and engaging procedural gameplay.</p>
+                            </div>
+
+                            <div class="mt-6">
+                                <h4 class="text-xl font-semibold mb-2">Technical Contributions</h4>
+                                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                    <li><strong>Procedural Generation:</strong> Developed a random dungeon generation system that integrates environment assets with dynamic enemy placement.</li>
+                                    <li><strong>Modular AI Spawning:</strong> Built a level-based engine that scales enemy difficulty and types dynamically to maintain player challenge.</li>
+                                    <li><strong>RPG Framework:</strong> Engineered a comprehensive Quest & Dialogue System supporting branching narratives and persistent player choices.</li>
+                                    <li><strong>System Architecture:</strong> Developed a robust Save System to handle complex character data and world states across multiple runs.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mt-6">
+                                <h4 class="text-xl font-semibold mb-2">Challenges & Solutions</h4>
+                                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                    <li><strong>Optimization:</strong> Solved performance bottlenecks for on-the-fly asset loading during procedural generation.</li>
+                                    <li><strong>Cross-Disciplinary Lead:</strong> Bridged the gap between Art, Design, and Development to streamline high-fidelity asset integration.</li>
+                                    <li><strong>Strategic Alignment:</strong> Balanced market demands with team capabilities to ensure a polished Steam debut.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mt-8">
+                                <a href="https://store.steampowered.com/app/1049220/Naxia/" target="_blank" rel="noopener noreferrer" class="inline-block bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 hover:bg-indigo-500">
+                                    View on Steam
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
+                        <section class="splide dino-tank-splide" aria-label="Dino Tank Gameplay Slideshow">
+                          <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide"><img src="Images/DinoTank/image1.png" alt="Dino Tank" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Dino+Tank+1'"></li>
+                                    <li class="splide__slide"><img src="Images/DinoTank/image2.png" alt="Dino Tank" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Dino+Tank+2'"></li>
+                                    <li class="splide__slide"><img src="Images/DinoTank/image3.png" alt="Dino Tank" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Dino+Tank+3'"></li>
+                                </ul>
+                          </div>
+                        </section>
+                        <div class="p-8">
+                            <h3 class="text-3xl font-bold">Dino Tank</h3>
+                            <p class="text-indigo-500 font-semibold text-lg mt-1">Game Programmer (Capstone Project)</p>
+                            <div class="mt-6">
+                                <h4 class="text-xl font-semibold mb-2">Technical Summary</h4>
+                                <p class="text-gray-700">This project is a 3D fantasy tank game. My role was to polish the game to an alpha state, which involved identifying and fixing critical bugs, primarily related to AI behavior and navigation.</p>
+                            </div>
+                            <div class="mt-6">
+                                <h4 class="text-xl font-semibold mb-2">Role & Responsibilities</h4>
+                                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                    <li>Investigated and fixed bugs related to spawning AI agents.</li>
+                                    <li>Resolved critical issues where an AI's target was outside the navmesh bounds.</li>
+                                    <li>Refactored and polished AI code to bring the game to a stable alpha state.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
+                        <section class="splide waves-of-war-splide" aria-label="Waves of War Gameplay Slideshow">
+                          <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide"><img src="Images/WavesOfWar/image5.png" alt="Waves of War" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Waves+of+War+1'"></li>
+                                    <li class="splide__slide"><img src="Images/WavesOfWar/image6.png" alt="Waves of War" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Waves+of+War+2'"></li>
+                                </ul>
+                          </div>
+                        </section>
                         <div class="p-8">
                             <h3 class="text-3xl font-bold">Waves of War</h3>
                             <p class="text-indigo-500 font-semibold text-lg mt-1">Architecture & AI Programmer (GDMS Course Project)</p>
-                            
                             <div class="mt-6">
                                 <h4 class="text-xl font-semibold mb-2">Technical Summary</h4>
-                                <p class="text-gray-700">
-                                    This project was a 3D top-down battleship-like game. My contribution was to develop the base architecture for the entire game and implement a pathfinding solution for the ship's movement.
-                                </p>
+                                <p class="text-gray-700">This project was a 3D top-down battleship-like game. My contribution was to develop the base architecture for the entire game and implement a pathfinding solution for the ship's movement.</p>
                             </div>
-
                             <div class="mt-6">
                                 <h4 class="text-xl font-semibold mb-2">Role & Responsibilities</h4>
                                 <ul class="list-disc list-inside text-gray-700 space-y-2">
                                     <li>Designed and developed the base code architecture using the MVVM pattern.</li>
                                     <li>Implemented the A* pathfinding algorithm for all ship movement and navigation.</li>
-                                    <li>Implemented the ship's attack pattern logic and upgrade logic.</li>
                                     <li>Ensured the game logic was decoupled from the UI/View.</li>
-                                    <li>Helped other programmers with feature implementation, bug fixing, and ensuring builds were delivered on schedule.</li>
                                 </ul>
-                            </div>
-
-                            <div class="mt-6">
-                                <h4 class="text-xl font-semibold mb-2">Research & Application</h4>
-                                <p class="text-gray-700">
-                                    For the <b><i>Waves of War</i></b> architecture, I researched practical software design patterns and implemented the MVVM pattern, which is used in AAA titles like <i>Gears 5</i> to decouple game logic from the visual code. I also studied AI pathfinding and applied that research by using the foundational A* algorithm for the ships' movement.
-                                </p>
-                            </div>
-
-                            <div class="mt-6">
-                                <h4 class="text-xl font-semibold mb-2">Technologies & Tools</h4>
-                                <p class="text-gray-700">
-                                    <span class="font-semibold">Technologies:</span> Unity, C#, A* Pathfinding, MVVM Design Pattern
-                                    <br>
-                                    <span class="font-semibold">Tools:</span> Jetbrains Rider, Github
-                                </p>
-                            </div>
-                            
-                            <div class="flex flex-wrap gap-4 mt-8">
-                                <!-- 
-                                <a href="[Link_To_Video]" class="bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 hover:bg-indigo-500">
-                                    Watch Gameplay
-                                </a>
-                                -->
-                                <a href="https://github.com/tataunlimited/Chaotic-Battleship" class="bg-gray-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 hover:bg-gray-600">
-                                    Source Code
-                                </a>
                             </div>
                         </div>
                     </article>
-                    <!-- === END OF PROJECT 2 === -->
-                    
-                    <!-- === PROJECT 3: Dino Tank === -->
-                    <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
-                        
-                        <!-- === UPDATED: DINO TANK SLIDESHOW === -->
-                        <section class="splide dino-tank-splide" aria-label="Dino Tank Gameplay Slideshow">
-                          <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li class="splide__slide">
-                                        <!-- === IMPORTANT: Change these image paths === -->
-                                        <img src="Images/DinoTank/image1.png" alt="Dino Tank Image 1" class="w-full h-auto object-cover" onerror="this.src='https.placehold.co/1200x600/e2e8f0/64748b?text=Image+1'">
-                                    </li>
-                                    <li class="splide__slide">
-                                        <!-- === IMPORTANT: Change these image paths === -->
-                                        <img src="Images/DinoTank/image2.png" alt="Dino Tank Image 1" class="w-full h-auto object-cover" onerror="this.src='https.placehold.co/1200x600/e2e8f0/64748b?text=Image+1'">
-                                    </li>
-                                    <li class="splide__slide">
-                                        <img src="Images/DinoTank/image3.png" alt="Dino Tank Image 2" class="w-full h-auto object-cover" onerror="this.src='https.placehold.co/1200x600/e2e8f0/64748b?text=Image+2'">
-                                    </li>
-                                    <li class="splide__slide">
-                                        <img src="Images/DinoTank/image7.png" alt="Dino Tank Image 3" class="w-full h-auto object-cover" onerror="this.src='https.placehold.co/1200x600/e2e8f0/64748b?text=Image+3'">
-                                    </li>
-                                </ul>
-                          </div>
-                        </section>
-                        <!-- === END OF SLIDESHOW === -->
-
-                        <div class="p-8">
-                            <h3 class="text-3xl font-bold">Dino Tank</h3>
-                            <p class="text-indigo-500 font-semibold text-lg mt-1">Game Programmer (Capstone Project)</p>
-                            
-                            <div class="mt-6">
-                                <h4 class="text-xl font-semibold mb-2">Technical Summary</h4>
-                                <p class="text-gray-700">
-                                    This project is a 3D fantasy tank game. My role was to polish the game to an alpha state, which involved identifying and fixing critical bugs, primarily related to AI behavior and navigation.
-                                </p>
-                            </div>
-
-                            <div class="mt-6">
-                                <h4 class="text-xl font-semibold mb-2">Role & Responsibilities</h4>
-                                <ul class="list-disc list-inside text-gray-700 space-y-2">
-                                    <li>Investigated and fixed bugs related to spawning AI agents.</li>
-                                    <li>Resolved critical issues where an AI's target was outside the navmesh bounds, causing errors.</li>
-                                    <li>Refactored and polished AI code to bring the game to a stable alpha state.</li>
-                                    <li>Helped polish other aspects of the game like tank movement and logic for trees to fall on collision.</li>
-                                    <li>Assisted with regular playtesting and bugfixing.</li>
-                                </ul>
-                            </div>
-
-                            <div class="mt-6">
-                                <h4 class="text-xl font-semibold mb-2">Research & Application</h4>
-                                <p class="text-gray-700">
-                                    My work on <b><i>Dino Tank</i></b> involved polishing the game to an alpha state, which required me to solve specific AI issues. To do this, I researched common challenges in AI navigation, specifically handling agents whose targets were outside the navmesh bounds and pathfinding in large worlds.
-                                </p>
-                            </div>
-
-                            <div class="mt-6">
-                                <h4 class="text-xl font-semibold mb-2">Technologies & Tools</h4>
-                                <p class="text-gray-700">
-                                    <span class="font-semibold">Technologies:</span> Unity, C#, Navmesh
-                                    <br>
-                                    <span class="font-semibold">Tools:</span> Jetbrains Rider, Github
-                                </p>
-                            </div>
-                            
-                            <div class="flex flex-wrap gap-4 mt-8">
-                                <!-- 
-                                <a href="[Link_To_Video]" class="bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 hover:bg-indigo-500">
-                                    Watch Gameplay
-                                </a>
-                                -->
-
-                            </div>
-                        </div>
-                    </article>
-                    <!-- === END OF PROJECT 3 === -->
-
                 </section>
 
-                <!-- 
-                  SECTION: RESUME
-                 -->
                 <section id="resume" class="scroll-section min-h-screen mb-16">
                     <h2 class="text-4xl font-bold border-b pb-4 mb-8">Resume</h2>
-                    
-                    <a href="TaherSamadiShal-Resume.pdf" download class="inline-block bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 hover:bg-indigo-500 text-lg mb-12">
+                    <a href="TaherSamadiShal_Resume.pdf" download class="inline-block bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 hover:bg-indigo-500 text-lg mb-12">
                         Download PDF Resume
                     </a>
-
-                    <!-- Resume details listed directly -->
                     <div class="space-y-12">
-                        <!-- Experience Section -->
                         <div>
                             <h3 class="text-3xl font-semibold text-indigo-700 mb-6">Experience</h3>
                             <div class="space-y-8">
-                                <!-- Job 1 -->
                                 <div class="bg-white p-6 rounded-lg shadow-sm">
                                     <h4 class="text-2xl font-bold">Lead Programmer</h4>
                                     <p class="text-lg font-semibold text-gray-700">Mars Games | December 2024 - Present</p>
-                                    <ul class="list-disc list-inside mt-4 text-gray-700 space-y-2">
-                                        <li>Promoted to Lead Programmer from Programmer/System Designer.</li>
-                                        <li>Architected and implemented scalable networking infrastructure using AWS.</li>
-                                        <li>Led design and refactoring of core systems like player data and server travel.</li>
-                                    </ul>
                                 </div>
-                                <!-- Job 2 -->
                                 <div class="bg-white p-6 rounded-lg shadow-sm">
-                                    <h4 class="text-2xl font-bold">Game Programmer</h4>
-                                    <p class="text-lg font-semibold text-gray-700">Zygobot | September 2025 - Present</p>
-                                    <ul class="list-disc list-inside mt-4 text-gray-700 space-y-2">
-                                        <li>Developed AI behaviors for the game.</li>
-                                        <li>Implemented pathfinding for the game.</li>
-                                        <li>Polished the game to an alpha state.</li>
-                                    </ul>
+                                    <h4 class="text-2xl font-bold">Lead Unity Programmer</h4>
+                                    <p class="text-lg font-semibold text-gray-700">LiquidX | May 2023 - September 2024</p>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Education Section -->
-                        <div>
-                            <h3 class="text-3xl font-semibold text-indigo-700 mb-6">Education</h3>
-                            <div class="bg-white p-6 rounded-lg shadow-sm">
-                                <h4 class="text-2xl font-bold">Master of Science, Game Design</h4>
-                                <p class="text-lg font-semibold text-gray-700">Full Sail University | November 2025</p>
-                                <p class="mt-4 text-gray-700">Focus on Game Programming and System's Design.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- 
-                  SECTION: CONTACT
-                 -->
                 <section id="contact" class="scroll-section min-h-screen mb-16">
                     <h2 class="text-4xl font-bold border-b pb-4 mb-8">Contact Me</h2>
-                    
                     <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto text-center">
                         <h3 class="text-3xl font-bold mb-4">Let's Connect!</h3>
-                        <p class="text-lg text-gray-700 mb-6">
-                            I'm currently seeking new opportunities. Feel free to reach out via email or connect with me on LinkedIn.
-                        </p>
-                        
+                        <p class="text-lg text-gray-700 mb-6">Currently seeking new opportunities.</p>
                         <a href="mailto:Taher.samadi@gmail.com" class="inline-block bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 hover:bg-indigo-500 text-lg">
                             Email: Taher.samadi@gmail.com
                         </a>
-                        
-                        <div class="mt-8">
-                            <p class="text-gray-600">You can also find me on:</p>
-                            <div class="flex justify-center gap-6 mt-4"> <!-- Corrected 'classs' to 'class' -->
-                                <!-- === FIXED LINKEDIN URL === -->
-                                <a href="https://www.linkedin.com/in/taher-samadi-8343444a/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-semibold">LinkedIn</a>
-                                <!-- === FIXED GITHUB URL === -->
-                                <a href="https://github.com/tataunlimited" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-semibold">GitHub</a>
-                            </div>
+                        <div class="mt-8 flex justify-center gap-6">
+                            <a href="https://www.linkedin.com/in/taher-samadi-8343444a/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-semibold">LinkedIn</a>
+                            <a href="https://github.com/tataunlimited" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-semibold">GitHub</a>
                         </div>
                     </div>
                 </section>
 
             </div>
-            
-            <!-- Footer -->
             <footer class="text-center p-8 text-gray-500 border-t bg-gray-50">
-                &copy; 2025 Taher Samadi Shal. All Rights Reserved.
+                &copy; 2026 Taher Samadi Shal. All Rights Reserved.
             </footer>
-
         </main>
     </div>
 
@@ -495,84 +419,35 @@
             const navLinks = document.querySelectorAll('a.nav-link');
             const sections = document.querySelectorAll('section.scroll-section');
 
-            // --- Smooth Scrolling ---
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
                     const targetElement = document.querySelector(targetId);
-                    
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
+                    if (targetElement) { targetElement.scrollIntoView({ behavior: 'smooth' }); }
                 });
             });
 
-            // --- Active Link on Scroll (Intersection Observer) ---
-            const observerOptions = {
-                root: null, // relative to the viewport
-                // We create a "trigger window" in the middle of the screen.
-                // top margin: -40% (ignore top 40% of viewport)
-                // bottom margin: -40% (ignore bottom 40% of viewport)
-                // This leaves the middle 20% of the screen as the "active" zone.
-                rootMargin: '-40% 0px -40% 0px',
-                // Fire as soon as any part of the section enters this zone
-                threshold: 0
-            };
-
-            const observerCallback = (entries, observer) => {
+            const observerOptions = { root: null, rootMargin: '-40% 0px -40% 0px', threshold: 0 };
+            const observerCallback = (entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        // Get the ID of the visible section
-                        const visibleSectionId = entry.target.id;
-                        
-                        // Remove 'active' class from all nav links
-                        navLinks.forEach(link => {
-                            link.classList.remove('active');
-                        });
-                        
-                        // Add 'active' class to the corresponding nav link
-                        const activeLink = document.querySelector(`.nav-links a[href="#${visibleSectionId}"]`);
-                        if (activeLink) {
-                            activeLink.classList.add('active');
-                        }
+                        navLinks.forEach(link => link.classList.remove('active'));
+                        const activeLink = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+                        if (activeLink) activeLink.classList.add('active');
                     }
                 });
             };
 
             const observer = new IntersectionObserver(observerCallback, observerOptions);
+            sections.forEach(section => observer.observe(section));
 
-            // Observe each section
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-
-            // === NEW: Initialize Slideshows ===
-            // First, check if the Splide library has loaded
             if (typeof Splide !== 'undefined') {
-
-                // Initialize Dino Tank Slideshow
-                new Splide('.dino-tank-splide', {
-                    type        : 'loop',   // Loops back to the start
-                    autoplay    : true,   // Automatically advances slides
-                    interval    : 4000,   // 4 seconds per slide
-                    pauseOnHover: true,   // Pauses when you hover over it
-                }).mount();
-
-                // Initialize Waves of War Slideshow
-                new Splide('.waves-of-war-splide', {
-                    type        : 'loop',
-                    autoplay    : true,
-                    interval    : 4500, // Slightly different interval
-                    pauseOnHover: true,
-                }).mount();
-
-            } else {
-                console.error('Splide.js library not loaded.');
+                new Splide('.novathera-splide', { type: 'loop', autoplay: true, interval: 4000 }).mount();
+                new Splide('.naxia-splide', { type: 'loop', autoplay: true, interval: 4200 }).mount();
+                new Splide('.dino-tank-splide', { type: 'loop', autoplay: true, interval: 4000 }).mount();
+                new Splide('.waves-of-war-splide', { type: 'loop', autoplay: true, interval: 4500 }).mount();
             }
-            // === END OF NEW SCRIPT ===
         });
     </script>
 </body>
