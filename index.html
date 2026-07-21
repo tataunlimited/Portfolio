@@ -105,34 +105,33 @@
         <main class="w-full pt-28 md:pt-0 md:ml-64">
             <div class="p-6 md:p-12 max-w-4xl mx-auto">
                 
-                <section id="welcome" class="scroll-section min-h-screen mb-16">
+                <section id="welcome" class="scroll-section mb-16 md:mb-32">
                     <div class="h-64 md:h-96 bg-gray-300 rounded-lg flex items-center justify-center text-gray-500 overflow-hidden">
                         <img src="Images/welcome-background.jpg" alt="Hero Background" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Welcome+Image'">
                     </div>
 
                     <h1 class="text-4xl md:text-5xl font-bold mt-8">Hello! I'm Taher.</h1>
                     <p class="text-xl text-gray-600 mt-4">
-                        I'm a game programmer focused on showcasing my ability to implement core systems and polish products for release. 
-                        This portfolio is a technical summary of the projects I've worked on, my specific roles, and how I've applied research to solve complex problems.
+                        I am a Senior Game Engineer with over 10 years of experience shipping commercial titles. I specialize in building robust gameplay systems, multiplayer networking, and custom developer tools. This portfolio breaks down how I architect scalable systems across Unity and Unreal Engine to bridge the gap between engineering and content creators.
                     </p>
                     
                     <div class="grid md:grid-cols-3 gap-8 mt-12">
                         <div class="bg-white p-6 rounded-lg shadow-sm">
-                            <h3 class="text-xl font-semibold mb-3">Core Systems</h3>
-                            <p class="text-gray-700">Experienced in developing base architecture, networking infrastructure, and core game logic.</p>
+                            <h3 class="text-xl font-semibold mb-3">Systems & Architecture</h3>
+                            <p class="text-gray-700">Experienced in building clean, scalable C# and C++ frameworks, custom developer tools, and core gameplay loops for cross-platform releases.</p>
                         </div>
                         <div class="bg-white p-6 rounded-lg shadow-sm">
-                            <h3 class="text-xl font-semibold mb-3">AI & Pathfinding</h3>
-                            <p class="text-gray-700">Skilled in implementing and debugging AI behaviors, including A* pathfinding and navmesh solutions.</p>
+                            <h3 class="text-xl font-semibold mb-3">Multiplayer & Services</h3>
+                            <p class="text-gray-700">Skilled in engineering server-authoritative architectures, seamless cloud save systems, and networked multiplayer using AWS, Photon, and Unreal networking.</p>
                         </div>
                         <div class="bg-white p-6 rounded-lg shadow-sm">
-                            <h3 class="text-xl font-semibold mb-3">Game Polish</h3>
-                            <p class="text-gray-700">Dedicated to finalizing products by handling bugs, refactoring systems, and polishing gameplay to a production state.</p>
+                            <h3 class="text-xl font-semibold mb-3">Performance & Workflows</h3>
+                            <p class="text-gray-700">Dedicated to setting up CI/CD pipelines, optimizing memory management, and profiling games to ensure high-fidelity performance on PC, mobile, and consoles.</p>
                         </div>
                     </div>
                 </section>
 
-                <section id="projects" class="scroll-section min-h-screen mb-16">
+                <section id="projects" class="scroll-section mb-16 md:mb-32">
                     <h2 class="text-4xl font-bold border-b pb-4 mb-8">Projects</h2>
 
                     <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
@@ -152,10 +151,10 @@
                                 <h4 class="text-xl font-semibold mb-2">Role & Responsibilities</h4>
                                 <ul class="list-disc list-inside text-gray-700 space-y-2">
                                     <li>Set up networking using AWS GameLift and implemented Unreal seamless travel.</li>
-                                    <li>Handled login and registration via AWS Cognito.</li>
-                                    <li>Used API Gateway and Lambda for serverless logic, with EC2 fleets for host servers.</li>
-                                    <li>Managed player data persistence using S3 and refactored the save system.</li>
-                                    <li>Designed high-level architecture diagrams and supported multiple server instances.</li>
+                                    <li>Implemented a multiplayer replication system, actively synchronizing networked character asset data via PlayerState across clients.</li>
+                                    <li>Handled login and registration via AWS Cognito, using API Gateway and Lambda for serverless logic.</li>
+                                    <li>Managed player data persistence using S3 and DynamoDB to build a seamless cloud save system.</li>
+                                    <li>Built custom debugging tools and editor extensions in C++ to speed up the content team's iteration time.</li>
                                 </ul>
                             </div>
 
@@ -370,7 +369,7 @@
                     </article>
                 </section>
 
-                <section id="resume" class="scroll-section min-h-screen mb-16">
+                <section id="resume" class="scroll-section mb-16 md:mb-32">
                     <h2 class="text-4xl font-bold border-b pb-4 mb-8">Resume</h2>
                     <a href="TaherSamadiShal_Resume.pdf" download class="inline-block bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 hover:bg-indigo-500 text-lg mb-12">
                         Download PDF Resume
@@ -378,29 +377,34 @@
                     <div class="space-y-12">
                         <div>
                             <h3 class="text-3xl font-semibold text-indigo-700 mb-6">Experience</h3>
+
                             <div class="space-y-8">
                                 <div class="bg-white p-6 rounded-lg shadow-sm">
-                                    <h4 class="text-2xl font-bold">Lead Unreal Programmer</h4>
-                                    <p class="text-lg font-semibold text-gray-700">Mars Games | December 2024 - Present</p>
+                                    <h4 class="text-2xl font-bold">Senior Unity Engineer</h4>
+                                    <p class="text-lg font-semibold text-gray-700">DoubleCoconut | January 2026 - Present</p>
                                 </div>
                                 <div class="bg-white p-6 rounded-lg shadow-sm">
-                                    <h4 class="text-2xl font-bold">Lead Unity Programmer</h4>
+                                    <h4 class="text-2xl font-bold">Lead Unreal Programmer</h4>
+                                    <p class="text-lg font-semibold text-gray-700">Mars Games | December 2024 - November 2025</p>
+                                </div>
+                                <div class="bg-white p-6 rounded-lg shadow-sm">
+                                    <h4 class="text-2xl font-bold">Lead Unity Engineer</h4>
                                     <p class="text-lg font-semibold text-gray-700">LiquidX | May 2023 - September 2024</p>
                                 </div>
-								<div class="bg-white p-6 rounded-lg shadow-sm">
-                                    <h4 class="text-2xl font-bold">Lead Unity Programmer</h4>
+                                <div class="bg-white p-6 rounded-lg shadow-sm">
+                                    <h4 class="text-2xl font-bold">Senior Unity Engineer</h4>
                                     <p class="text-lg font-semibold text-gray-700">DoubleCoconut | April 2021 - April 2023</p>
                                 </div>
-								<div class="bg-white p-6 rounded-lg shadow-sm">
-                                    <h4 class="text-2xl font-bold">Senior Unity Programmer</h4>
-                                    <p class="text-lg font-semibold text-gray-700">BadBadake Haft Aseman | Oct 2018 - March 2021</p>
+                                <div class="bg-white p-6 rounded-lg shadow-sm">
+                                    <h4 class="text-2xl font-bold">Senior Unity Engineer</h4>
+                                    <p class="text-lg font-semibold text-gray-700">Badbadake Haft Aseman | October 2018 - March 2021</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section id="contact" class="scroll-section min-h-screen mb-16">
+                <section id="contact" class="scroll-section mb-16 md:mb-32">
                     <h2 class="text-4xl font-bold border-b pb-4 mb-8">Contact Me</h2>
                     <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto text-center">
                         <h3 class="text-3xl font-bold mb-4">Let's Connect!</h3>
@@ -409,7 +413,7 @@
                             Email: Taher.samadi@gmail.com
                         </a>
                         <div class="mt-8 flex justify-center gap-6">
-                            <a href="https://www.linkedin.com/in/taher-samadi-8343444a/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-semibold">LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/taher-samadi-shal-8343444a/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-semibold">LinkedIn</a>
                             <a href="https://github.com/tataunlimited" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-semibold">GitHub</a>
                         </div>
                     </div>
