@@ -118,7 +118,7 @@
             <h3 class="project-title" id="aaa-title">Unannounced AAA online title</h3>
             <p class="project-role">Lead Unreal Programmer, Mars Games</p>
             <p class="project-meta"><span>Dec 2024 – Nov 2025</span><span class="chip">Unannounced live-service game</span></p>
-            <p class="project-summary">I architected the Unreal Engine 5 online stack: dedicated servers on AWS GameLift, serverless accounts, and cloud saves that keep player and world state across servers and sessions.</p>
+            <p class="project-summary">I architected the Unreal Engine 5 online stack: dedicated servers on AWS GameLift, serverless accounts, and cloud saves that keep player and world state across servers and sessions. The build we showed at Gamescom 2025 helped the project secure funding.</p>
             <ul class="points">
               <li>Dedicated-server networking on AWS GameLift, with Unreal seamless travel.</li>
               <li>Login and registration on Cognito, API Gateway, and Lambda, built as scalable serverless services.</li>
@@ -129,12 +129,15 @@
               <summary><span class="when-closed">Full breakdown</span><span class="when-open">Hide breakdown</span></summary>
               <ul class="points">
                 <li>Replicated character asset data through PlayerState and synced procedural world events across clients.</li>
+                <li>Refactored complex third-party Blueprint assets from single-player to replicated multiplayer, and connected them to the cloud save design.</li>
+                <li>Worked with designers and artists to make their gameplay logic and systems run correctly in multiplayer.</li>
+                <li>Built game UI in C++ and Blueprints.</li>
                 <li>Built C++ debugging tools and Unreal editor extensions that shortened the content team's iteration time.</li>
                 <li>Based the backend design on research into serverless AWS architectures and how online games scale to millions of players.</li>
               </ul>
             </details>
             <ul class="tags" aria-label="Technologies">
-              <li>Unreal Engine 5</li><li>C++</li><li>AWS GameLift</li><li>Cognito</li><li>API Gateway</li><li>Lambda</li><li>DynamoDB</li><li>S3</li><li>EC2</li><li>Jenkins</li>
+              <li>Unreal Engine 5</li><li>C++</li><li>Blueprints</li><li>AWS GameLift</li><li>Cognito</li><li>API Gateway</li><li>Lambda</li><li>DynamoDB</li><li>S3</li><li>EC2</li><li>Jenkins</li>
             </ul>
           </div>
         </article>
@@ -478,7 +481,7 @@
             <div class="tl-body">
               <h3 class="tl-role">Lead Unreal Programmer</h3>
               <p class="tl-org">Mars Games, Winter Park, FL</p>
-              <p class="tl-desc">Architected UE5 C++ networking, serverless backend services, and cloud saves for an unannounced AAA live-service game, and owned the Jenkins build and GameLift deployment pipeline.</p>
+              <p class="tl-desc">Architected UE5 C++ networking, serverless backend services, and cloud saves for an unannounced AAA live-service game, and owned the Jenkins build and GameLift deployment pipeline. Made designers' systems and third-party assets multiplayer-ready, and built UI in C++ and Blueprints. Showed at Gamescom 2025.</p>
               <a class="tl-link" href="#aaa">Unannounced AAA online title</a>
             </div>
           </li>
