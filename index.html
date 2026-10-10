@@ -1,466 +1,599 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taher Samadi Shal - Game Programmer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taher Samadi Shal | Senior Game Engineer, Unity and Unreal</title>
+  <meta name="description" content="Senior game engineer with 13 years shipping Unity and Unreal games on Steam, mobile, and web. Multiplayer, serverless game backends, procedural systems, and developer tools.">
+  <meta name="author" content="Taher Samadi Shal">
+  <meta name="theme-color" content="#0D131A">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://tataunlimited.github.io/Portfolio/">
 
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f4f4f5;
-        }
-        
-        .nav-link.active {
-            color: #818cf8;
-            font-weight: 600;
-        }
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Taher Samadi Shal">
+  <meta property="og:title" content="Taher Samadi Shal, Senior Game Engineer">
+  <meta property="og:description" content="13 years shipping Unity and Unreal games. Multiplayer, serverless backends, procedural systems, and tools.">
+  <meta property="og:url" content="https://tataunlimited.github.io/Portfolio/">
+  <meta property="og:image" content="https://tataunlimited.github.io/Portfolio/Images/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Taher Samadi Shal, Senior Game Engineer, over a hex grid with an A* path">
+  <meta name="twitter:card" content="summary_large_image">
 
-        section[id] {
-            scroll-margin-top: 100px;
-        }
-        
-        @media (min-width: 768px) {
-            section[id] {
-                scroll-margin-top: 24px;
-            }
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/big-shoulders-700.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="assets/fonts/instrument-sans-400.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
 
-            .nav-links li {
-                position: relative; 
-            }
-            
-            .nav-link.active {
-                padding-left: 1.25rem;
-            }
-            
-            .nav-link.active::before {
-                content: '•';
-                position: absolute;
-                left: 0.25rem;
-                top: 50%;
-                transform: translateY(-50%);
-                font-size: 1.25rem; 
-                line-height: 1;
-                color: #818cf8;
-            }
-        }
-
-        .splide__arrow {
-            background: rgba(45, 55, 72, 0.7);
-        }
-        .splide__arrow svg {
-            fill: #e0e7ff;
-        }
-        
-        .splide__pagination__page {
-            background: #a5b4fc;
-            opacity: 0.7;
-        }
-        .splide__pagination__page.is-active {
-            background: #818cf8;
-            opacity: 1;
-            transform: scale(1.2);
-        }
-    </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Taher Samadi Shal",
+    "jobTitle": "Senior Game Engineer",
+    "url": "https://tataunlimited.github.io/Portfolio/",
+    "email": "mailto:taher.samadi@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Orlando", "addressRegion": "FL", "addressCountry": "US" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Full Sail University" },
+    "knowsAbout": ["Unity", "C#", "Unreal Engine 5", "C++", "Multiplayer networking", "AWS GameLift", "Photon", "Procedural generation", "Game tools"],
+    "sameAs": ["https://www.linkedin.com/in/taher-samadi-shal-8343444a/", "https://github.com/tataunlimited"]
+  }
+  </script>
 </head>
-<body class="text-gray-800">
+<body>
+  <a class="skip-link" href="#work">Skip to projects</a>
 
-    <div class="md:flex">
-        <nav class="bg-gray-900 text-gray-300 fixed top-0 left-0 w-full z-50 p-5 shadow-lg md:w-64 md:min-h-screen md:p-8 md:shadow-none">
-            <div class="md:sticky md:top-8">
-                <div class="mb-8 hidden md:block">
-                    <h1 class="text-3xl font-bold text-white">Taher Samadi Shal</h1>
-                    <h2 class="text-lg text-indigo-300">Game Programming & System's Design</h2>
-                </div>
-                
-                <h1 class="text-xl font-bold text-white md:hidden text-center">Taher Samadi Shal</h1>
-
-                <ul class="flex justify-center space-x-4 mt-4 md:flex-col md:space-x-0 md:space-y-3 nav-links">
-                    <li><a href="#welcome" class="nav-link block p-2 md:p-0 transition-all duration-200 hover:text-white">Welcome</a></li>
-                    <li><a href="#projects" class="nav-link block p-2 md:p-0 transition-all duration-200 hover:text-white">Projects</a></li>
-                    <li><a href="#resume" class="nav-link block p-2 md:p-0 transition-all duration-200 hover:text-white">Resume</a></li>
-                    <li><a href="#contact" class="nav-link block p-2 md:p-0 transition-all duration-200 hover:text-white">Contact</a></li>
-                </ul>
-
-                <div class="hidden md:block mt-12">
-                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Get in Touch</h3>
-                    <a href="mailto:Taher.samadi@gmail.com" class="block text-sm mt-3 transition-colors duration-200 hover:text-white">Taher.samadi@gmail.com</a>
-                    <a href="https://www.linkedin.com/in/taher-samadi-shal-8343444a/" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-indigo-600 text-white rounded-lg py-2 mt-6 font-semibold transition-colors duration-200 hover:bg-indigo-500">
-                        LinkedIn
-                    </a>
-                    <a href="https://github.com/tataunlimited" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-gray-700 text-white rounded-lg py-2 mt-3 font-semibold transition-colors duration-200 hover:bg-gray-600">
-                        GitHub
-                    </a>
-                </div>
-            </div>
-        </nav>
-
-        <main class="w-full pt-28 md:pt-0 md:ml-64">
-            <div class="p-6 md:p-12 max-w-4xl mx-auto">
-                
-                <section id="welcome" class="scroll-section mb-16 md:mb-32">
-                    <div class="h-64 md:h-96 bg-gray-300 rounded-lg flex items-center justify-center text-gray-500 overflow-hidden">
-                        <img src="Images/welcome-background.jpg" alt="Hero Background" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Welcome+Image'">
-                    </div>
-
-                    <h1 class="text-4xl md:text-5xl font-bold mt-8">Hello! I'm Taher.</h1>
-                    <p class="text-xl text-gray-600 mt-4">
-                        I am a Senior Game Engineer with over 10 years of experience shipping commercial titles. I specialize in building robust gameplay systems, multiplayer networking, and custom developer tools. This portfolio breaks down how I architect scalable systems across Unity and Unreal Engine to bridge the gap between engineering and content creators.
-                    </p>
-                    
-                    <div class="grid md:grid-cols-3 gap-8 mt-12">
-                        <div class="bg-white p-6 rounded-lg shadow-sm">
-                            <h3 class="text-xl font-semibold mb-3">Systems & Architecture</h3>
-                            <p class="text-gray-700">Experienced in building clean, scalable C# and C++ frameworks, custom developer tools, and core gameplay loops for cross-platform releases.</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm">
-                            <h3 class="text-xl font-semibold mb-3">Multiplayer & Services</h3>
-                            <p class="text-gray-700">Skilled in engineering server-authoritative architectures, seamless cloud save systems, and networked multiplayer using AWS, Photon, and Unreal networking.</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-lg shadow-sm">
-                            <h3 class="text-xl font-semibold mb-3">Performance & Workflows</h3>
-                            <p class="text-gray-700">Dedicated to setting up CI/CD pipelines, optimizing memory management, and profiling games to ensure high-fidelity performance on PC, mobile, and consoles.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="projects" class="scroll-section mb-16 md:mb-32">
-                    <h2 class="text-4xl font-bold border-b pb-4 mb-8">Projects</h2>
-
-                    <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
-                        <div class="bg-gray-300">
-                            <img src="Images/AAA/image1.png" alt="High-level networking architecture" class="w-full h-auto object-cover">
-                        </div>
-                        <div class="p-8">
-                            <h3 class="text-3xl font-bold">Unannounced AAA project</h3>
-                            <p class="text-indigo-500 font-semibold text-lg mt-1">Lead Programmer / System Designer (Mars Games)</p>
-                            
-                            <div class="mt-6">
-                                <h4 class="text-xl font-semibold mb-2">Technical Summary</h4>
-                                <p class="text-gray-700">I focused on setting up a scalable networking infrastructure for an industry-scale project. This involved solving technical challenges using Unreal Engine and a suite of AWS services to build a robust backend for a live-service game.</p>
-                            </div>
-                            
-                            <div class="mt-6">
-                                <h4 class="text-xl font-semibold mb-2">Role & Responsibilities</h4>
-                                <ul class="list-disc list-inside text-gray-700 space-y-2">
-                                    <li>Set up networking using AWS GameLift and implemented Unreal seamless travel.</li>
-                                    <li>Implemented a multiplayer replication system, actively synchronizing networked character asset data via PlayerState across clients.</li>
-                                    <li>Handled login and registration via AWS Cognito, using API Gateway and Lambda for serverless logic.</li>
-                                    <li>Managed player data persistence using S3 and DynamoDB to build a seamless cloud save system.</li>
-                                    <li>Built custom debugging tools and editor extensions in C++ to speed up the content team's iteration time.</li>
-                                </ul>
-                            </div>
-
-                            <div class="mt-6">
-                                <h4 class="text-xl font-semibold mb-2">Research & Application</h4>
-                                <p class="text-gray-700">To set up the networking infrastructure, I consulted technical articles and tutorials to ensure I was following industry-standard practices for modern, cloud-based game backends. My goal was to build a scalable architecture, so I applied research on using AWS services for a serverless backend, as well as engineering deep dives on how to scale online games to millions of players.</p>
-                            </div>
-
-                            <div class="mt-6">
-                                <h4 class="text-xl font-semibold mb-2">Technologies & Tools</h4>
-                                <p class="text-gray-700"><span class="font-semibold">Technologies:</span> Unreal Engine, C++, AWS GameLift, AWS Lambda, API Gateway, AWS Cognito, EC2, S3</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
-                        <section class="splide novathera-splide" aria-label="Warriors of Nova Thera Gameplay Slideshow">
-                          <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li class="splide__slide">
-                                        <img src="Images/NovaThera/1.jpg" alt="Nova Thera Slide 1" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Nova+Thera+Image+1'">
-                                    </li>
-                                    <li class="splide__slide">
-                                        <img src="Images/NovaThera/2.jpg" alt="Nova Thera Slide 2" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Nova+Thera+Image+2'">
-                                    </li>
-									 <li class="splide__slide">
-                                        <img src="Images/NovaThera/3.jpg" alt="Nova Thera Slide 2" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Nova+Thera+Image+2'">
-                                    </li>
-									 <li class="splide__slide">
-                                        <img src="Images/NovaThera/4.jpg" alt="Nova Thera Slide 2" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Nova+Thera+Image+2'">
-                                    </li>
-                                </ul>
-                          </div>
-                        </section>
-
-                        <div class="p-8">
-                            <h3 class="text-3xl font-bold">Warriors of Nova Thera</h3>
-                            <p class="text-indigo-500 font-semibold text-lg mt-1">Lead Unity Programmer (LiquidX)</p>
-                            
-                            <div class="mt-6">
-                                <h4 class="text-xl font-semibold mb-2">Project Overview</h4>
-                                <p class="text-gray-700">Warriors of Nova Thera is a fast-paced roguelike featuring Pixelmon characters. As Lead Unity Programmer, I oversaw the technical architecture and core development through a successful Closed Beta release on Steam. My focus was on creating deep progression systems and a highly replayable, procedurally generated world.</p>
-                            </div>
-
-                            <div class="mt-6">
-                                <h4 class="text-xl font-semibold mb-2">Key Technical Contributions</h4>
-                                <ul class="list-disc list-inside text-gray-700 space-y-2">
-                                    <li><strong>Multiplayer Architecture:</strong> Integrated Photon Fusion to provide a high-performance, synchronized multiplayer experience.</li>
-                                    <li><strong>Procedural World Building:</strong> Developed a custom hexagonal random map generation system, creating unique layouts for every run.</li>
-                                    <li><strong>Progression & Skill Systems:</strong> Engineered a complex player growth framework featuring skill upgrades, level-based rarity scaling, and persistent ability unlocks.</li>
-                                    <li><strong>Physics & Gameplay:</strong> Designed character movement, physics-based interactions, and combat loops to ensure a responsive, "game-feel" focused experience.</li>
-                                    <li><strong>Dynamic Balancing:</strong> Built an intelligent enemy spawn and reward system that scales difficulty and loot based on real-time player progression.</li>
-                                </ul>
-                            </div>
-
-                            <div class="mt-6">
-                                <h4 class="text-xl font-semibold mb-2">Leadership & Optimization</h4>
-                                <ul class="list-disc list-inside text-gray-700 space-y-2">
-                                    <li><strong>Technical Oversight:</strong> Directed the development of Enemy AI and UI systems, ensuring they integrated seamlessly with the core gameplay architecture.</li>
-                                    <li><strong>Performance Engineering:</strong> Optimized the game for Steam’s hardware standards, balancing high-fidelity assets with the performance demands of procedural generation and multiplayer.</li>
-                                </ul>
-                            </div>
-
-                            <div class="mt-8">
-                                <a href="https://store.steampowered.com/app/2913760/Warriors_of_Nova_Thera/" target="_blank" rel="noopener noreferrer" class="inline-block bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 hover:bg-indigo-500">
-                                    View on Steam
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
-						<div class="bg-gray-100 p-8 flex items-center justify-center">
-						<img src="Images/TCG/1.png" 
-             alt="Emergents TCG Cards" 
-             class="max-h-[400px] w-auto object-contain" 
-             onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=TCG+Card+Game'">
-						</div>
-						<div class="p-8">
-							<h3 class="text-3xl font-bold">Emergents TCG</h3>
-							<p class="text-indigo-500 font-semibold text-lg mt-1">Lead Unity Programmer (DoubleCoconut)</p>
-							
-							<div class="mt-6">
-								<h4 class="text-xl font-semibold mb-2">Project Overview</h4>
-								<p class="text-gray-700">Emergents TCG was a high-performance, multiplayer turn-based card game built in Unity 3D. As Lead Programmer, I spearheaded a two-year development cycle from conception through a successful Open Beta release. While the project was later cancelled for non-technical reasons, the architecture remained rock-solid, supporting cross-platform play and competitive integrity.</p>
-							</div>
-
-							<div class="mt-6">
-								<h4 class="text-xl font-semibold mb-2">Technical Contributions</h4>
-								<ul class="list-disc list-inside text-gray-700 space-y-2">
-									<li><strong>Network Architecture:</strong> Implemented Photon PUN 2 for real-time multiplayer synchronization.</li>
-									<li><strong>Security & Fair Play:</strong> Engineered a server-authoritative rules engine executed on a relay server to prevent client-side cheating and ensure gameplay consistency.</li>
-									<li><strong>Cross-Platform Engineering:</strong> Optimized performance and managed Build Automation for a simultaneous release on macOS, Windows, Android, and WebGL.</li>
-									<li><strong>Core Systems:</strong> Developed high-fidelity UI systems, core gameplay loops, and state-management frameworks tailored for complex TCG mechanics.</li>
-								</ul>
-							</div>
-
-							<div class="mt-6">
-								<h4 class="text-xl font-semibold mb-2">Leadership & Challenges</h4>
-								<ul class="list-disc list-inside text-gray-700 space-y-2">
-									<li><strong>Technical Orchestration:</strong> Coordinated technical requirements and API integrations across five distinct teams: Unity, Rules Engine, Art, Backend, and Design.</li>
-									<li><strong>Agile Delivery:</strong> Established a rapid deployment pipeline, consistently delivering stable weekly builds to stakeholders and testers.</li>
-									<li><strong>Platform Optimization:</strong> Overcame significant performance hurdles to maintain a unified experience across mobile and web-based browsers.</li>
-								</ul>
-							</div>
-						</div>
-					</article>
-
-                    <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
-                        <section class="splide naxia-splide" aria-label="Naxia Gameplay Slideshow">
-                          <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li class="splide__slide">
-                                        <img src="Images/Naxia/1.jpg" alt="Naxia Slide 1" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Naxia+Image+1'">
-                                    </li>
-                                    <li class="splide__slide">
-                                        <img src="Images/Naxia/2.jpg" alt="Naxia Slide 2" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Naxia+Image+2'">
-                                    </li>
-                                </ul>
-                          </div>
-                        </section>
-
-                        <div class="p-8">
-                            <h3 class="text-3xl font-bold">Naxia</h3>
-                            <p class="text-indigo-500 font-semibold text-lg mt-1">Senior Unity Engineer (Badbadake Haft Aseman)</p>
-                            
-                            <div class="mt-6">
-                                <h4 class="text-xl font-semibold mb-2">Project Overview</h4>
-                                <p class="text-gray-700">Naxia merges old-school action-RPGs with modern rogue-lites. As Senior Unity Engineer, I led technical development to secure a high-quality Steam release, focusing on scalable systems and engaging procedural gameplay.</p>
-                            </div>
-
-                            <div class="mt-6">
-                                <h4 class="text-xl font-semibold mb-2">Technical Contributions</h4>
-                                <ul class="list-disc list-inside text-gray-700 space-y-2">
-                                    <li><strong>Procedural Generation:</strong> Developed a random dungeon generation system that integrates environment assets with dynamic enemy placement.</li>
-                                    <li><strong>Modular AI Spawning:</strong> Built a level-based engine that scales enemy difficulty and types dynamically to maintain player challenge.</li>
-                                    <li><strong>RPG Framework:</strong> Engineered a comprehensive Quest & Dialogue System supporting branching narratives and persistent player choices.</li>
-                                    <li><strong>System Architecture:</strong> Developed a robust Save System to handle complex character data and world states across multiple runs.</li>
-                                </ul>
-                            </div>
-
-                            <div class="mt-6">
-                                <h4 class="text-xl font-semibold mb-2">Challenges & Solutions</h4>
-                                <ul class="list-disc list-inside text-gray-700 space-y-2">
-                                    <li><strong>Optimization:</strong> Solved performance bottlenecks for on-the-fly asset loading during procedural generation.</li>
-                                    <li><strong>Cross-Disciplinary Lead:</strong> Bridged the gap between Art, Design, and Development to streamline high-fidelity asset integration.</li>
-                                    <li><strong>Strategic Alignment:</strong> Balanced market demands with team capabilities to ensure a polished Steam debut.</li>
-                                </ul>
-                            </div>
-
-                            <div class="mt-8">
-                                <a href="https://store.steampowered.com/app/1049220/Naxia/" target="_blank" rel="noopener noreferrer" class="inline-block bg-indigo-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 hover:bg-indigo-500">
-                                    View on Steam
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
-                        <section class="splide dino-tank-splide" aria-label="Dino Tank Gameplay Slideshow">
-                          <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li class="splide__slide"><img src="Images/DinoTank/image1.png" alt="Dino Tank" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Dino+Tank+1'"></li>
-                                    <li class="splide__slide"><img src="Images/DinoTank/image2.png" alt="Dino Tank" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Dino+Tank+2'"></li>
-                                    <li class="splide__slide"><img src="Images/DinoTank/image3.png" alt="Dino Tank" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Dino+Tank+3'"></li>
-                                </ul>
-                          </div>
-                        </section>
-                        <div class="p-8">
-                            <h3 class="text-3xl font-bold">Dino Tank</h3>
-                            <p class="text-indigo-500 font-semibold text-lg mt-1">Game Programmer (Capstone Project)</p>
-                            <div class="mt-6">
-                                <h4 class="text-xl font-semibold mb-2">Technical Summary</h4>
-                                <p class="text-gray-700">This project is a 3D fantasy tank game. My role was to polish the game to an alpha state, which involved identifying and fixing critical bugs, primarily related to AI behavior and navigation.</p>
-                            </div>
-                            <div class="mt-6">
-                                <h4 class="text-xl font-semibold mb-2">Role & Responsibilities</h4>
-                                <ul class="list-disc list-inside text-gray-700 space-y-2">
-                                    <li>Investigated and fixed bugs related to spawning AI agents.</li>
-                                    <li>Resolved critical issues where an AI's target was outside the navmesh bounds.</li>
-                                    <li>Refactored and polished AI code to bring the game to a stable alpha state.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-16">
-                        <section class="splide waves-of-war-splide" aria-label="Waves of War Gameplay Slideshow">
-                          <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li class="splide__slide"><img src="Images/WavesOfWar/image5.png" alt="Waves of War" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Waves+of+War+1'"></li>
-                                    <li class="splide__slide"><img src="Images/WavesOfWar/image6.png" alt="Waves of War" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/1200x600/e2e8f0/64748b?text=Waves+of+War+2'"></li>
-                                </ul>
-                          </div>
-                        </section>
-                        <div class="p-8">
-                            <h3 class="text-3xl font-bold">Waves of War</h3>
-                            <p class="text-indigo-500 font-semibold text-lg mt-1">Architecture & AI Programmer (GDMS Course Project)</p>
-                            <div class="mt-6">
-                                <h4 class="text-xl font-semibold mb-2">Technical Summary</h4>
-                                <p class="text-gray-700">This project was a 3D top-down battleship-like game. My contribution was to develop the base architecture for the entire game and implement a pathfinding solution for the ship's movement.</p>
-                            </div>
-                            <div class="mt-6">
-                                <h4 class="text-xl font-semibold mb-2">Role & Responsibilities</h4>
-                                <ul class="list-disc list-inside text-gray-700 space-y-2">
-                                    <li>Designed and developed the base code architecture using the MVVM pattern.</li>
-                                    <li>Implemented the A* pathfinding algorithm for all ship movement and navigation.</li>
-                                    <li>Ensured the game logic was decoupled from the UI/View.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </article>
-                </section>
-
-                <section id="resume" class="scroll-section mb-16 md:mb-32">
-                    <h2 class="text-4xl font-bold border-b pb-4 mb-8">Resume</h2>
-                    <a href="TaherSamadiShal_Resume.pdf" download class="inline-block bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 hover:bg-indigo-500 text-lg mb-12">
-                        Download PDF Resume
-                    </a>
-                    <div class="space-y-12">
-                        <div>
-                            <h3 class="text-3xl font-semibold text-indigo-700 mb-6">Experience</h3>
-
-                            <div class="space-y-8">
-                                <div class="bg-white p-6 rounded-lg shadow-sm">
-                                    <h4 class="text-2xl font-bold">Senior Unity Engineer</h4>
-                                    <p class="text-lg font-semibold text-gray-700">DoubleCoconut | January 2026 - Present</p>
-                                </div>
-                                <div class="bg-white p-6 rounded-lg shadow-sm">
-                                    <h4 class="text-2xl font-bold">Lead Unreal Programmer</h4>
-                                    <p class="text-lg font-semibold text-gray-700">Mars Games | December 2024 - November 2025</p>
-                                </div>
-                                <div class="bg-white p-6 rounded-lg shadow-sm">
-                                    <h4 class="text-2xl font-bold">Lead Unity Engineer</h4>
-                                    <p class="text-lg font-semibold text-gray-700">LiquidX | May 2023 - September 2024</p>
-                                </div>
-                                <div class="bg-white p-6 rounded-lg shadow-sm">
-                                    <h4 class="text-2xl font-bold">Senior Unity Engineer</h4>
-                                    <p class="text-lg font-semibold text-gray-700">DoubleCoconut | April 2021 - April 2023</p>
-                                </div>
-                                <div class="bg-white p-6 rounded-lg shadow-sm">
-                                    <h4 class="text-2xl font-bold">Senior Unity Engineer</h4>
-                                    <p class="text-lg font-semibold text-gray-700">Badbadake Haft Aseman | October 2018 - March 2021</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="contact" class="scroll-section mb-16 md:mb-32">
-                    <h2 class="text-4xl font-bold border-b pb-4 mb-8">Contact Me</h2>
-                    <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto text-center">
-                        <h3 class="text-3xl font-bold mb-4">Let's Connect!</h3>
-                        <p class="text-lg text-gray-700 mb-6">Currently seeking new opportunities.</p>
-                        <a href="mailto:Taher.samadi@gmail.com" class="inline-block bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 hover:bg-indigo-500 text-lg">
-                            Email: Taher.samadi@gmail.com
-                        </a>
-                        <div class="mt-8 flex justify-center gap-6">
-                            <a href="https://www.linkedin.com/in/taher-samadi-shal-8343444a/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-semibold">LinkedIn</a>
-                            <a href="https://github.com/tataunlimited" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-semibold">GitHub</a>
-                        </div>
-                    </div>
-                </section>
-
-            </div>
-            <footer class="text-center p-8 text-gray-500 border-t bg-gray-50">
-                &copy; 2026 Taher Samadi Shal. All Rights Reserved.
-            </footer>
-        </main>
+  <nav class="site-nav" aria-label="Primary">
+    <div class="container nav-inner">
+      <a class="nav-name" href="#top">Taher Samadi Shal</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#work">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="nav-resume" href="TaherSamadiShal_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const navLinks = document.querySelectorAll('a.nav-link');
-            const sections = document.querySelectorAll('section.scroll-section');
+  <header class="hero" id="top" data-hero>
+    <canvas class="hero-canvas hero-grid" aria-hidden="true"></canvas>
+    <canvas class="hero-canvas hero-live" aria-hidden="true"></canvas>
 
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) { targetElement.scrollIntoView({ behavior: 'smooth' }); }
-                });
-            });
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1><span data-avoid>Taher</span> <span data-avoid>Samadi Shal</span></h1>
+        <p class="hero-role" data-avoid>Senior game engineer, Unity and Unreal Engine</p>
+        <p class="hero-lead" data-avoid>For 13 years I've built the systems under the game: multiplayer and serverless backends, procedural worlds, gameplay frameworks, and the tools content teams ship with. Recently, I led online engineering on an unannounced AAA title in Unreal Engine 5.</p>
+        <div class="hero-actions" data-avoid>
+          <a class="btn btn-primary" href="#work">View my projects</a>
+          <a class="btn" href="TaherSamadiShal_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+          <span class="hero-links">
+            <a href="mailto:taher.samadi@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/taher-samadi-shal-8343444a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/tataunlimited" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </span>
+        </div>
+        <p class="hero-status" data-avoid>Open to senior and lead roles. Based in Orlando, FL, and open to relocating anywhere in the US.</p>
+      </div>
 
-            const observerOptions = { root: null, rootMargin: '-40% 0px -40% 0px', threshold: 0 };
-            const observerCallback = (entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        navLinks.forEach(link => link.classList.remove('active'));
-                        const activeLink = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-                        if (activeLink) activeLink.classList.add('active');
-                    }
-                });
-            };
+      <p class="hero-caption" data-avoid>
+        <strong>Live A* pathfinding</strong> on a procedurally generated hex grid.
+        <span class="caption-hint" data-hint-pointer>Move your pointer to set a goal. Walls and text block the way; dotted ground costs more.</span>
+        <span class="caption-hint" data-hint-touch hidden>Tap the grid to set a goal.</span>
+        <span class="readout" data-readout aria-hidden="true">
+          <span><b data-r="len">0</b> steps</span>
+          <span><b data-r="explored">0</b> nodes explored</span>
+          <span><b data-r="ms">0.0</b> ms</span>
+        </span>
+      </p>
+    </div>
+  </header>
 
-            const observer = new IntersectionObserver(observerCallback, observerOptions);
-            sections.forEach(section => observer.observe(section));
+  <main>
+    <!-- ============================== SELECTED WORK ============================== -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="work-title">Projects</h2>
+          <p>Commercial projects, newest first. Click any screenshot to enlarge it.</p>
+        </header>
 
-            if (typeof Splide !== 'undefined') {
-                new Splide('.novathera-splide', { type: 'loop', autoplay: true, interval: 4000 }).mount();
-                new Splide('.naxia-splide', { type: 'loop', autoplay: true, interval: 4200 }).mount();
-                new Splide('.dino-tank-splide', { type: 'loop', autoplay: true, interval: 4000 }).mount();
-                new Splide('.waves-of-war-splide', { type: 'loop', autoplay: true, interval: 4500 }).mount();
-            }
-        });
-    </script>
+        <!-- Unannounced AAA -->
+        <article class="project" id="aaa" aria-labelledby="aaa-title">
+          <div class="project-media">
+            <div class="gallery" data-gallery>
+              <div class="gallery-track" aria-label="Unannounced AAA title images">
+                <figure class="slide fit-contain diagram">
+                  <button class="slide-zoom" type="button" data-caption="Online architecture: Cognito handles login, API Gateway and Lambda run the serverless services, GameLift places players on EC2 fleets of Unreal dedicated servers, and S3 stores player data.">
+                    <img src="Images/web/aaa-architecture.webp" width="2000" height="967" alt="Architecture diagram: Unreal client, AWS Cognito, API Gateway, Lambda, GameLift, S3, and an EC2 fleet of Unreal servers with seamless travel" decoding="async">
+                  </button>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title" id="aaa-title">Unannounced AAA online title</h3>
+            <p class="project-role">Lead Unreal Programmer, Mars Games</p>
+            <p class="project-meta"><span>Dec 2024 – Nov 2025</span><span class="chip">Unannounced live-service game</span></p>
+            <p class="project-summary">I architected the Unreal Engine 5 online stack: dedicated servers on AWS GameLift, serverless accounts, and cloud saves that keep player and world state across servers and sessions.</p>
+            <ul class="points">
+              <li>Dedicated-server networking on AWS GameLift, with Unreal seamless travel.</li>
+              <li>Login and registration on Cognito, API Gateway, and Lambda, built as scalable serverless services.</li>
+              <li>A DynamoDB and S3 cloud save system that persists player and world data across servers and sessions.</li>
+            </ul>
+            <details class="breakdown">
+              <summary><span class="when-closed">Full breakdown</span><span class="when-open">Hide breakdown</span></summary>
+              <ul class="points">
+                <li>Replicated character asset data through PlayerState and synced procedural world events across clients.</li>
+                <li>Built C++ debugging tools and Unreal editor extensions that shortened the content team's iteration time.</li>
+                <li>Based the backend design on research into serverless AWS architectures and how online games scale to millions of players.</li>
+              </ul>
+            </details>
+            <ul class="tags" aria-label="Technologies">
+              <li>Unreal Engine 5</li><li>C++</li><li>AWS GameLift</li><li>Cognito</li><li>API Gateway</li><li>Lambda</li><li>DynamoDB</li><li>S3</li><li>EC2</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Warriors of Nova Thera -->
+        <article class="project" id="nova-thera" aria-labelledby="nova-thera-title">
+          <div class="project-media">
+            <div class="gallery" data-gallery>
+              <div class="gallery-track" aria-label="Warriors of Nova Thera screenshots">
+                <figure class="slide">
+                  <button class="slide-zoom" type="button" data-caption="Warriors of Nova Thera, combat on an island map.">
+                    <img src="Images/web/nova-thera-1.webp" width="1600" height="900" alt="Warriors of Nova Thera: a hero fighting creatures on a rocky island path" loading="lazy" decoding="async">
+                  </button>
+                </figure>
+                <figure class="slide">
+                  <button class="slide-zoom" type="button" data-caption="Warriors of Nova Thera, exploring a forest map.">
+                    <img src="Images/web/nova-thera-2.webp" width="1600" height="900" alt="Warriors of Nova Thera: a character crossing a forest clearing beside a river" loading="lazy" decoding="async">
+                  </button>
+                </figure>
+                <figure class="slide">
+                  <button class="slide-zoom" type="button" data-caption="Warriors of Nova Thera, a fight beside a lake.">
+                    <img src="Images/web/nova-thera-3.webp" width="1600" height="900" alt="Warriors of Nova Thera: combat effects near a lake surrounded by trees" loading="lazy" decoding="async">
+                  </button>
+                </figure>
+                <figure class="slide fit-contain">
+                  <button class="slide-zoom" type="button" data-caption="Skill upgrade choices with rarity tiers, part of the progression framework.">
+                    <img src="Images/web/nova-thera-skills.webp" width="512" height="264" alt="Three skill upgrade cards labelled Epic, Common, and Legendary" loading="lazy" decoding="async">
+                  </button>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title" id="nova-thera-title">Warriors of Nova Thera</h3>
+            <p class="project-role">Lead Unity Engineer, LiquidX</p>
+            <p class="project-meta"><span>May 2023 – Sep 2024</span><span class="chip">Steam Closed Beta</span></p>
+            <p class="project-summary">A fast, physics-driven roguelike starring Pixelmon characters. I owned the technical architecture through the Steam Closed Beta.</p>
+            <ul class="points">
+              <li>Photon Fusion multiplayer layered on fast, physics-based combat, kept synchronized and responsive.</li>
+              <li>Hex-based procedural map generation that builds a new layout for every run.</li>
+              <li>A spawn and reward director that scales difficulty and loot to each player's progression.</li>
+            </ul>
+            <details class="breakdown">
+              <summary><span class="when-closed">Full breakdown</span><span class="when-open">Hide breakdown</span></summary>
+              <ul class="points">
+                <li>Progression framework with skill upgrades, level-based rarity scaling, and persistent ability unlocks.</li>
+                <li>Character movement, physics interactions, and combat loops tuned for game feel.</li>
+                <li>Level design tools that let designers tune gameplay variables in real time.</li>
+                <li>Directed enemy AI and UI work, ran code reviews, and automated builds with TeamCity.</li>
+                <li>Optimized for Steam hardware targets while balancing the cost of procedural generation and multiplayer.</li>
+              </ul>
+            </details>
+            <ul class="tags" aria-label="Technologies">
+              <li>Unity</li><li>C#</li><li>Photon Fusion</li><li>Procedural generation</li><li>TeamCity</li><li>Steam</li>
+            </ul>
+            <p class="project-links">
+              <a class="link-out" href="https://store.steampowered.com/app/2913760/Warriors_of_Nova_Thera/" target="_blank" rel="noopener noreferrer">Steam page<svg aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 4 12" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Emergents TCG -->
+        <article class="project" id="emergents" aria-labelledby="emergents-title">
+          <div class="project-media">
+            <div class="gallery" data-gallery>
+              <div class="gallery-track" aria-label="Emergents TCG images">
+                <figure class="slide fit-contain cards">
+                  <button class="slide-zoom" type="button" data-caption="Emergents TCG cards.">
+                    <img src="Images/web/emergents-cards.webp" width="964" height="1110" alt="Four Emergents TCG cards fanned out: Sunder, Zoemg, The Accelerant, and Maser" loading="lazy" decoding="async">
+                  </button>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title" id="emergents-title">Emergents TCG</h3>
+            <p class="project-role">Senior Unity Engineer and Unity lead, DoubleCoconut</p>
+            <p class="project-meta"><span>Apr 2021 – Apr 2023</span><span class="chip">Open Beta on four platforms</span></p>
+            <p class="project-summary">A cross-platform multiplayer trading card game. I led Unity engineering for two years, from concept to Open Beta on Windows, macOS, Android, and WebGL. The game was later cancelled for non-technical reasons.</p>
+            <ul class="points">
+              <li>A server-authoritative rules engine on a Photon PUN 2 relay server that stopped client-side cheating.</li>
+              <li>Simultaneous Windows, macOS, Android, and WebGL builds, tuned for mobile and the browser.</li>
+              <li>Stable weekly builds through Unity Cloud Build and GitHub CI.</li>
+            </ul>
+            <details class="breakdown">
+              <summary><span class="when-closed">Full breakdown</span><span class="when-open">Hide breakdown</span></summary>
+              <ul class="points">
+                <li>Coordinated technical requirements and APIs across five teams: Unity, rules engine, art, backend, and design.</li>
+                <li>Built the UI systems, core gameplay loop, and state management for complex card-game rules.</li>
+                <li>Worked through performance limits so mobile and browser players got the same experience.</li>
+              </ul>
+            </details>
+            <ul class="tags" aria-label="Technologies">
+              <li>Unity</li><li>C#</li><li>Photon PUN 2</li><li>WebGL</li><li>Unity Cloud Build</li><li>GitHub CI</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Naxia -->
+        <article class="project" id="naxia" aria-labelledby="naxia-title">
+          <div class="project-media">
+            <div class="gallery" data-gallery>
+              <div class="gallery-track" aria-label="Naxia screenshots">
+                <figure class="slide">
+                  <button class="slide-zoom" type="button" data-caption="Naxia, an autumn village area.">
+                    <img src="Images/web/naxia-1.webp" width="1600" height="896" alt="Naxia: a hero walking through an autumn village with orange trees" loading="lazy" decoding="async">
+                  </button>
+                </figure>
+                <figure class="slide">
+                  <button class="slide-zoom" type="button" data-caption="Naxia, a corrupted cave level.">
+                    <img src="Images/web/naxia-2.webp" width="1600" height="895" alt="Naxia: a dark cave lit by glowing red crystals and a fire" loading="lazy" decoding="async">
+                  </button>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title" id="naxia-title">Naxia</h3>
+            <p class="project-role">Senior Unity Engineer, Badbadake Haft Aseman</p>
+            <p class="project-meta"><span>Oct 2018 – Mar 2021</span><span class="chip">Released on Steam</span></p>
+            <p class="project-summary">An action RPG that blends old-school ARPG combat with rogue-lite runs. I led technical development through its Steam release.</p>
+            <ul class="points">
+              <li>Procedural dungeon generation with level-scaled enemy spawning.</li>
+              <li>Removed the on-the-fly asset loading stalls that hit during generation.</li>
+              <li>Branching quests and dialogue, inventory, and a save system for complex character and world state.</li>
+            </ul>
+            <details class="breakdown">
+              <summary><span class="when-closed">Full breakdown</span><span class="when-open">Hide breakdown</span></summary>
+              <ul class="points">
+                <li>Built a modular spawning system that changes enemy types and difficulty with level to keep runs challenging.</li>
+                <li>Bridged art, design, and engineering to streamline how high-fidelity assets got into the game.</li>
+                <li>Balanced scope against team capacity so the game launched polished on Steam.</li>
+              </ul>
+            </details>
+            <ul class="tags" aria-label="Technologies">
+              <li>Unity</li><li>C#</li><li>Procedural generation</li><li>Quest and dialogue systems</li><li>Save systems</li>
+            </ul>
+            <p class="project-links">
+              <a class="link-out" href="https://store.steampowered.com/app/1049220/Naxia/" target="_blank" rel="noopener noreferrer">Steam page<svg aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 4 12" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Saychin -->
+        <article class="project" id="saychin" aria-labelledby="saychin-title">
+          <div class="project-media">
+            <div class="gallery" data-gallery>
+              <div class="gallery-track" aria-label="Saychin screenshots">
+                <figure class="slide">
+                  <button class="slide-zoom" type="button" data-caption="A Persepolis level: turned the right way, the twisted sculpture casts a chariot on the carved wall.">
+                    <img src="Images/web/saychin-persepolis.webp" width="1600" height="900" alt="Saychin: a twisted sculpture among the ruins of Persepolis casts the shadow of a horse-drawn chariot on a carved wall" loading="lazy" decoding="async">
+                  </button>
+                </figure>
+                <figure class="slide">
+                  <button class="slide-zoom" type="button" data-caption="A rainy alley level: a jumble of metal parts resolves into the shadow of a samovar.">
+                    <img src="Images/web/saychin-samovar.webp" width="1600" height="900" alt="Saychin: a jumble of red and silver metal shapes in a rainy alley casts the shadow of a samovar" loading="lazy" decoding="async">
+                  </button>
+                </figure>
+                <figure class="slide">
+                  <button class="slide-zoom" type="button" data-caption="A locker-room level: the batter's silhouette appears once the sculpture is turned just right.">
+                    <img src="Images/web/saychin-baseball.webp" width="1600" height="900" alt="Saychin: a yellow sculpture in a locker room casts the shadow of a baseball batter" loading="lazy" decoding="async">
+                  </button>
+                </figure>
+                <figure class="slide">
+                  <button class="slide-zoom" type="button" data-caption="Level select: each solved silhouette glows in a light bulb, with its stars, time, and score.">
+                    <img src="Images/web/saychin-bulbs.webp" width="1600" height="908" alt="Saychin level select: hanging light bulbs with glowing filament shapes, star ratings, times, and scores" loading="lazy" decoding="async">
+                  </button>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title" id="saychin-title">Saychin</h3>
+            <p class="project-role">Unity Developer, Rashin Studio</p>
+            <p class="project-meta"><span>Sep 2017 – Sep 2018</span><span class="chip">Released on Android</span></p>
+            <p class="project-summary">A light-and-shadow puzzle game. Players turn abstract, broken-looking sculptures under a lamp until their shadow resolves into a clear silhouette, in levels drawn from Iranian culture, from the ruins of Persepolis to a rainy neighborhood alley.</p>
+            <ul class="points">
+              <li>Built a real-time two-player mode on Photon PUN: players matched through the backend solve the same puzzle at the same time, each seeing live how close the other is to the answer.</li>
+              <li>Shipped Saychin and several other mobile titles in an Agile/Scrum team, using SVN and Jira.</li>
+              <li>Rated 4.4 out of 5 by 199 players on Cafe Bazaar, Iran's largest Android app store.</li>
+            </ul>
+            <ul class="tags" aria-label="Technologies">
+              <li>Unity</li><li>C#</li><li>Photon PUN</li><li>Real-time multiplayer</li><li>Android</li><li>SVN</li><li>Jira</li>
+            </ul>
+            <p class="project-links">
+              <a class="link-out" href="https://cafebazaar.ir/app/ir.rashin.saychin?l=en" target="_blank" rel="noopener noreferrer" title="Opens Cafe Bazaar, Iran's Android app store">Cafe Bazaar page<svg aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 4 12" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Fractality -->
+        <article class="project" id="fractality" aria-labelledby="fractality-title">
+          <div class="project-media">
+            <div class="gallery" data-gallery>
+              <div class="gallery-track" aria-label="Fractality trailer and screenshots">
+                <figure class="slide slide-video">
+                  <video class="trailer" controls preload="none" playsinline width="1130" height="636" poster="Images/web/fractality-poster.webp" aria-label="Fractality trailer, one minute">
+                    <source src="Images/Fractality/fractality-trailer.mp4" type="video/mp4">
+                  </video>
+                  <button class="video-play" type="button" hidden>
+                    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6 3.8v12.4L16.2 10z" fill="currentColor"/></svg>
+                    Play trailer <span>1:00</span>
+                  </button>
+                </figure>
+                <figure class="slide">
+                  <button class="slide-zoom" type="button" data-caption="Floating islands of rock and blossom, a frame from the trailer.">
+                    <img src="Images/web/fractality-islands.webp" width="1130" height="636" alt="Fractality: floating rocks with pink blossom trees and a purple orb against a white sky" loading="lazy" decoding="async">
+                  </button>
+                </figure>
+                <figure class="slide">
+                  <button class="slide-zoom" type="button" data-caption="A golden fractal tunnel, a frame from the trailer.">
+                    <img src="Images/web/fractality-tunnel.webp" width="1130" height="636" alt="Fractality: a golden tunnel of interlocking fractal shapes" loading="lazy" decoding="async">
+                  </button>
+                </figure>
+                <figure class="slide">
+                  <button class="slide-zoom" type="button" data-caption="A particle nebula threaded with a geometric network, a frame from the trailer.">
+                    <img src="Images/web/fractality-nebula.webp" width="1130" height="636" alt="Fractality: magenta particles over a red geometric network in space" loading="lazy" decoding="async">
+                  </button>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title" id="fractality-title">Fractality</h3>
+            <p class="project-role">Co-founder, game designer and lead programmer, Midopia Game Studio</p>
+            <p class="project-meta"><span>2013 – 2017</span><span class="chip chip-award">Best Game of the Year, Iran's 10th Digital Media Festival</span></p>
+            <p class="project-summary">An arcade game framed as a journey from the earth to the skies and beyond. The world starts as floating islands of rock and blossom and turns into ever more intricate fractal geometry as you climb toward space.</p>
+            <ul class="points">
+              <li>Created the game concept and designed its core mechanics.</li>
+              <li>Led programming in Unity and C#: gameplay mechanics, procedural generation, the save system, and in-app purchases.</li>
+              <li>Won the Golden Badge for Best Game of the Year at Iran's 10th Digital Media Festival.</li>
+              <li>Co-founded Midopia Game Studio, pitched our projects, and secured external funding.</li>
+            </ul>
+            <ul class="tags" aria-label="Technologies">
+              <li>Unity</li><li>C#</li><li>Game design</li><li>Procedural generation</li><li>Save systems</li><li>In-app purchases</li><li>Android</li>
+            </ul>
+            <p class="project-links">
+              <a class="link-out" href="https://cafebazaar.ir/app/com.Midopia.Fractal?l=en" target="_blank" rel="noopener noreferrer" title="Opens Cafe Bazaar, Iran's Android app store">Cafe Bazaar page<svg aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 4 12" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Graduate projects -->
+        <div class="grad">
+          <h3 class="subhead">Graduate projects at Full Sail University</h3>
+          <div class="mini-grid">
+            <article class="mini" id="dino-tank" aria-labelledby="dino-tank-title">
+              <div class="gallery" data-gallery>
+                <div class="gallery-track" aria-label="Dino Tank screenshots">
+                  <figure class="slide">
+                    <button class="slide-zoom" type="button" data-caption="Dino Tank, a forest wave.">
+                      <img src="Images/web/dino-tank-1.webp" width="864" height="487" alt="Dino Tank: a tank aiming at enemies in a forest, with wave and objective HUD" loading="lazy" decoding="async">
+                    </button>
+                  </figure>
+                  <figure class="slide">
+                    <button class="slide-zoom" type="button" data-caption="Dino Tank, a snow level.">
+                      <img src="Images/web/dino-tank-2.webp" width="712" height="406" alt="Dino Tank: tanks fighting in a snowy level" loading="lazy" decoding="async">
+                    </button>
+                  </figure>
+                  <figure class="slide">
+                    <button class="slide-zoom" type="button" data-caption="Dino Tank, a valley level.">
+                      <img src="Images/web/dino-tank-3.webp" width="865" height="489" alt="Dino Tank: a tank near a watchtower in a green valley" loading="lazy" decoding="async">
+                    </button>
+                  </figure>
+                  <figure class="slide">
+                    <button class="slide-zoom" type="button" data-caption="Debugging AI navigation against the NavMesh in the Unity editor.">
+                      <img src="Images/web/dino-tank-navmesh.webp" width="712" height="401" alt="Unity editor scene view showing a NavMesh and an AI agent's path gizmos" loading="lazy" decoding="async">
+                    </button>
+                  </figure>
+                </div>
+              </div>
+              <h4 class="mini-title" id="dino-tank-title">Dino Tank</h4>
+              <p class="project-role">Game programmer, capstone project</p>
+              <p class="mini-summary">A 3D fantasy tank game. I brought it to a stable alpha by tracking down critical AI and navigation bugs.</p>
+              <ul class="points">
+                <li>Fixed AI agents that failed to spawn correctly.</li>
+                <li>Resolved agents choosing targets outside the NavMesh bounds.</li>
+                <li>Refactored and polished the AI code.</li>
+              </ul>
+              <ul class="tags" aria-label="Technologies"><li>Unity</li><li>C#</li><li>NavMesh</li><li>AI</li></ul>
+            </article>
+
+            <article class="mini" id="waves-of-war" aria-labelledby="waves-of-war-title">
+              <div class="gallery" data-gallery>
+                <div class="gallery-track" aria-label="Waves of War screenshots">
+                  <figure class="slide">
+                    <button class="slide-zoom" type="button" data-caption="Waves of War, the movement phase on the grid.">
+                      <img src="Images/web/waves-of-war-1.webp" width="1351" height="751" alt="Waves of War: ships on a glowing grid over the sea during the movement phase" loading="lazy" decoding="async">
+                    </button>
+                  </figure>
+                  <figure class="slide">
+                    <button class="slide-zoom" type="button" data-caption="Waves of War, the attack phase.">
+                      <img src="Images/web/waves-of-war-2.webp" width="1344" height="751" alt="Waves of War: the attack phase with two fleets' grids" loading="lazy" decoding="async">
+                    </button>
+                  </figure>
+                  <figure class="slide">
+                    <button class="slide-zoom" type="button" data-caption="Waves of War, buying and placing ships.">
+                      <img src="Images/web/waves-of-war-3.webp" width="1344" height="768" alt="Waves of War: ship purchase and placement screen" loading="lazy" decoding="async">
+                    </button>
+                  </figure>
+                  <figure class="slide fit-contain code">
+                    <button class="slide-zoom" type="button" data-caption="The A* pathfinder behind ship movement (C#).">
+                      <img src="Images/web/waves-of-war-astar.webp" width="1395" height="901" alt="C# source code of the A* pathfinding class" loading="lazy" decoding="async">
+                    </button>
+                  </figure>
+                </div>
+              </div>
+              <h4 class="mini-title" id="waves-of-war-title">Waves of War</h4>
+              <p class="project-role">Architecture and AI programmer, course project</p>
+              <p class="mini-summary">A top-down 3D naval strategy game in the spirit of Battleship. I built the base architecture and the ships' pathfinding.</p>
+              <ul class="points">
+                <li>Designed the code architecture on MVVM, keeping game logic decoupled from the UI.</li>
+                <li>Implemented A* pathfinding for all ship movement and navigation.</li>
+              </ul>
+              <ul class="tags" aria-label="Technologies"><li>Unity</li><li>C#</li><li>MVVM</li><li>A* pathfinding</li></ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== EXPERIENCE ============================== -->
+    <section class="section section-alt" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="experience-title">Experience</h2>
+          <p>From co-founding an indie studio in Iran to leading online engineering on an AAA title in Florida.</p>
+        </header>
+
+        <ol class="timeline">
+          <li>
+            <p class="tl-when">Jan 2026 – Present</p>
+            <div class="tl-body">
+              <h3 class="tl-role">Senior Unity Engineer</h3>
+              <p class="tl-org">DoubleCoconut, San Francisco, CA (remote)</p>
+              <p class="tl-desc">Advise client teams on Unity architecture, help maintain mid-core titles in active development, profile and optimize gameplay code, and set up build pipelines.</p>
+            </div>
+          </li>
+          <li>
+            <p class="tl-when">Dec 2024 – Nov 2025</p>
+            <div class="tl-body">
+              <h3 class="tl-role">Lead Unreal Programmer</h3>
+              <p class="tl-org">Mars Games, Winter Park, FL</p>
+              <p class="tl-desc">Architected UE5 C++ networking, serverless backend services, and cloud saves for an unannounced AAA live-service game.</p>
+              <a class="tl-link" href="#aaa">Unannounced AAA online title</a>
+            </div>
+          </li>
+          <li>
+            <p class="tl-when">May 2023 – Sep 2024</p>
+            <div class="tl-body">
+              <h3 class="tl-role">Lead Unity Engineer</h3>
+              <p class="tl-org">LiquidX, Kuala Lumpur, Malaysia (remote)</p>
+              <p class="tl-desc">Technical lead on a Steam roguelike through its Closed Beta. Directed enemy AI and UI work, ran code reviews, and automated builds.</p>
+              <a class="tl-link" href="#nova-thera">Warriors of Nova Thera</a>
+            </div>
+          </li>
+          <li>
+            <p class="tl-when">Apr 2021 – Apr 2023</p>
+            <div class="tl-body">
+              <h3 class="tl-role">Senior Unity Engineer</h3>
+              <p class="tl-org">DoubleCoconut, San Francisco, CA</p>
+              <p class="tl-desc">Led Unity engineering on a cross-platform multiplayer card game for two years, from concept to Open Beta.</p>
+              <a class="tl-link" href="#emergents">Emergents TCG</a>
+            </div>
+          </li>
+          <li>
+            <p class="tl-when">Oct 2018 – Mar 2021</p>
+            <div class="tl-body">
+              <h3 class="tl-role">Senior Unity Engineer</h3>
+              <p class="tl-org">Badbadake Haft Aseman, Tehran, Iran</p>
+              <p class="tl-desc">Led technical development of an action RPG rogue-lite through its Steam release.</p>
+              <a class="tl-link" href="#naxia">Naxia</a>
+            </div>
+          </li>
+          <li>
+            <p class="tl-when">Sep 2017 – Sep 2018</p>
+            <div class="tl-body">
+              <h3 class="tl-role">Unity Developer</h3>
+              <p class="tl-org">Rashin Studio (Pardazesh Negar Rashin), Tehran, Iran</p>
+              <p class="tl-desc">Built the real-time two-player mode for a light-and-shadow puzzle game, and shipped several other mobile titles in an Agile/Scrum team.</p>
+              <a class="tl-link" href="#saychin">Saychin</a>
+            </div>
+          </li>
+          <li>
+            <p class="tl-when">Apr 2013 – Oct 2017</p>
+            <div class="tl-body">
+              <h3 class="tl-role">Co-founder, game designer and lead programmer</h3>
+              <p class="tl-org">Midopia Game Studio, Iran</p>
+              <p class="tl-desc">Created the concept for an award-winning arcade game, designed its mechanics, and led its programming. Pitched projects and secured external funding.</p>
+              <a class="tl-link" href="#fractality">Fractality</a>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================== SKILLS + EDUCATION ============================== -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container split">
+        <div>
+          <header class="section-head section-head-tight">
+            <h2 id="skills-title">Skills</h2>
+          </header>
+          <dl class="skills">
+            <div><dt>Engines</dt><dd>Unity (C#, editor tooling), Unreal Engine 5 (C++, Blueprints, replication, seamless travel)</dd></div>
+            <div><dt>Languages</dt><dd>C#, C++, JavaScript and Node.js, SQL</dd></div>
+            <div><dt>Multiplayer and backend</dt><dd>Photon Fusion, Photon PUN 2, Unreal networking, AWS GameLift, Lambda, API Gateway, Cognito, DynamoDB, S3</dd></div>
+            <div><dt>Gameplay systems</dt><dd>Procedural generation, A* pathfinding and AI, physics and combat, save systems, quests and dialogue, in-app purchases, MVVM</dd></div>
+            <div><dt>Pipelines and tools</dt><dd>Git, SVN, TeamCity, Unity Cloud Build, GitHub CI, Jira, Visual Studio, Rider, profiling</dd></div>
+            <div><dt>Platforms</dt><dd>PC and Steam, macOS, iOS, Android, WebGL, PS4</dd></div>
+          </dl>
+        </div>
+        <div id="education">
+          <header class="section-head section-head-tight">
+            <h2>Education and awards</h2>
+          </header>
+          <ul class="honors">
+            <li><strong>M.S., Game Design</strong><span>Full Sail University</span><span class="chip chip-award">Valedictorian</span></li>
+            <li><strong>Golden Badge, Best Game of the Year</strong><span>Iran's 10th Digital Media Festival, for <a href="#fractality">Fractality</a></span></li>
+            <li><strong>M.S., Business Administration</strong><span>Azad University</span></li>
+            <li><strong>B.S., Industrial Management</strong><span>University of Guilan</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CONTACT ============================== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Get in touch</h2>
+        <p class="contact-lead">I'm looking for senior and lead engineering roles in games and real-time 3D: gameplay, multiplayer and backend, or tools, in Unity or Unreal. Email is the fastest way to reach me.</p>
+        <a class="contact-email" href="mailto:taher.samadi@gmail.com">taher.samadi@gmail.com</a>
+        <ul class="contact-links">
+          <li><a class="btn" href="https://www.linkedin.com/in/taher-samadi-shal-8343444a/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a class="btn" href="https://github.com/tataunlimited" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a class="btn" href="TaherSamadiShal_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
+        </ul>
+        <p class="contact-note">Orlando, Florida. Open to relocating anywhere in the US.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Taher Samadi Shal</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" aria-label="Image viewer">
+    <figure class="lb-figure">
+      <img alt="">
+      <figcaption class="lb-caption"></figcaption>
+    </figure>
+    <span class="lb-count" aria-live="polite"></span>
+    <button class="lb-btn lb-close" type="button" aria-label="Close image viewer"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5 5 15" stroke="currentColor" stroke-width="1.8" fill="none"/></svg></button>
+    <button class="lb-btn lb-prev" type="button" aria-label="Previous image"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4 6.5 10l6 6" stroke="currentColor" stroke-width="1.8" fill="none"/></svg></button>
+    <button class="lb-btn lb-next" type="button" aria-label="Next image"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7.5 4 6 6-6 6" stroke="currentColor" stroke-width="1.8" fill="none"/></svg></button>
+  </dialog>
+
+  <script src="assets/site.js" defer></script>
 </body>
 </html>
