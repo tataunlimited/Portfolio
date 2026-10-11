@@ -81,6 +81,7 @@
         prev.disabled = i === 0;
         next.disabled = i === slides.length - 1;
         videos.forEach(v => { if (!slides[i].contains(v) && !v.paused) v.pause(); });
+        slides.forEach((s, k) => { if (k !== i && s.stopYouTube) s.stopYouTube(); });
       };
       const go = i => {
         i = Math.max(0, Math.min(slides.length - 1, i));
@@ -110,6 +111,37 @@
   /* Trailer                                                             */
   /* ------------------------------------------------------------------ */
   function initTrailers() {
+    // YouTube slides load the player only when someone presses play.
+    document.querySelectorAll('.slide-yt').forEach(slide => {
+      const button = slide.querySelector('.video-play');
+      const poster = slide.querySelector('.yt-poster');
+      button.addEventListener('click', () => {
+        const q = new URLSearchParams({ autoplay: '1', rel: '0', modestbranding: '1', playsinline: '1' });
+        if (slide.dataset.start) q.set('start', slide.dataset.start);
+        if (slide.dataset.end) q.set('end', slide.dataset.end);
+        if (location.protocol.startsWith('http')) q.set('origin', location.origin);
+        const frame = document.createElement('iframe');
+        frame.src = `https://www.youtube-nocookie.com/embed/${slide.dataset.yt}?${q}`;
+        frame.title = poster ? poster.alt : 'YouTube video';
+        frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+        frame.allowFullscreen = true;
+        frame.referrerPolicy = 'strict-origin-when-cross-origin';  // YouTube rejects embeds with no referrer (error 153)
+        button.hidden = true;
+        if (poster) poster.hidden = true;
+        slide.classList.add('is-playing');
+        slide.insertBefore(frame, slide.firstChild);
+        frame.focus();
+      });
+      slide.stopYouTube = () => {
+        const frame = slide.querySelector('iframe');
+        if (!frame) return;
+        frame.remove();
+        button.hidden = false;
+        if (poster) poster.hidden = false;
+        slide.classList.remove('is-playing');
+      };
+    });
+
     document.querySelectorAll('.slide-video').forEach(slide => {
       const video = slide.querySelector('video');
       const button = slide.querySelector('.video-play');

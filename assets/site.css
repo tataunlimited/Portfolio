@@ -631,6 +631,19 @@ p { margin: 0; }
 .video-play[hidden] { display: none; }
 .video-play svg { width: 18px; height: 18px; color: var(--amber); }
 .video-play span { color: var(--text-2); font-weight: 400; font-variant-numeric: tabular-nums; }
+.slide-yt .yt-poster, .slide-yt iframe { display: block; width: 100%; height: 100%; object-fit: cover; border: 0; }
+.yt-credit {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(8, 11, 16, .7);
+  color: var(--text-2);
+  font-size: 12px;
+  pointer-events: none;
+}
+.slide-yt.is-playing .yt-credit { display: none; }
 .video-play:hover { background: rgba(8, 11, 16, .8); border-color: var(--amber); }
 
 /* ---------- Graduate projects ---------- */
